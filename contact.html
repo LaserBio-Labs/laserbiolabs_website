@@ -1,154 +1,32 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{ cat partials/head.html }}
+        <title>LaserBio Labs | Contact</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
 
- <html lang="en">
+        {{ cat partials/nav.html }}
+        <section class="">
 
-
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31698150-2"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-31698150-2');
-    gtag('config', 'UA-153407692-2');
-
-    </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link href='style.min.css' rel='stylesheet'>
-
-     <!-- FONTS -->
-     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
-
-    <!-- Title -->
-    <title>Laserbio Labs - Contact</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="images/logoLBL.gif">    
-</head>
-<body>
-
-    <div class='container' id='contact-main-container'>
-        <div class="top-banner">
-            <div class="logo-cont"><img src='images/logo_LBL.svg' alt='Laserbio Labs logo' class="LBL-small-logo"></div>
-
-        <div class="navbar"><!--NAVIGATION MENU-->
-                <div class="dropdown">
-                    <div class="dropbtn"><a class="nav-links" href="index.html">Home</a></div> 
-                    <div class="dropdown-content">
-                            <a class="sub-nav-links" href="index.html#about-anchor">About</a>
-                    </div>  
-                    </div>
-                <div class="dropdown">
-                    <div class="dropbtn"><a class="nav-links" href="products.html">Products</a></div> 
-                    <div class="dropdown-content">
-                        <a class="sub-nav-links" href="products.html#mat-anchor">Matrices</a>
-                        <a class="sub-nav-links" href="products.html#cal-anchor">Calibrants</a>
-                        <a class="sub-nav-links" href="products.html#dig-anchor">Digests</a>
-                        <a class="sub-nav-links" href="products.html#imag-anchor">Imaging</a>
-                        <a class="sub-nav-links" href="products.html#ckits-anchor">Custom kits</a>
-                    </div>                           
-                </div>
-                <div class="dropdown">
-                    <div class="dropbtn"><a class="nav-links" href="faq.html" id="orderFAQ">Order</a></div>
-                    <div class="dropdown-content">
-                            <a class="sub-nav-links" href="faq.html#howto-anchor">How to order</a>
-                            <a class="sub-nav-links" href="faq.html#faq-anchor">F.A.Q.</a>
-                    </div>  
-                </div>
-                <div class='dropbtn'><a  href="resources.html" id="resources" class="nav-links">Resources</a></div>
-                <div class='dropbtn'><a  href="contact.html" id="contact" class="nav-links curr-nav-link">Contact</a></div>
-        </div> <!--END OF NAVIGATION MENU-->
-    </div> <!--END OF TOP BANNER-->
-
-
-        <div class="blanck-bckg2"></div>
-
-        <div class ="btt-container">
-                <div class="backtotop">
-                    <a href="#contact-main-container" class="backtotop btt-link">
-                        <img class="btt-img" src="images/backtotop-no-bg.webp" alt="back to top button">
-                    </a>
-                </div>
+            <h1 class="section-title">Contact<br>Information</h1>
+            <div class="subtext">
+                <b>Address:  </b>  AREP CENTER 1 traverse des Brucs 06560 Valbonne, FRANCE<br>
+                <b>Phone:    </b>   +33 9 84 23 77 19<br>
+                <b>Email:    </b>     info@laserbiolabs.com<br>
+                <b>Fax:      </b>      +33 4 92 94 01 43
             </div>
+        </section>
+
+        {{ cat partials/footer.html}}
+    </body>
+
+</html>
 
 
-<!--------------------------------- CONTACT INFOS ---------------------------------->
-
-<div class="subgrid-container" id="contactinfo">
-        <div class="link-anchor prod-anchor" id="continfo-anchor"></div>
-        <div class="subgrid-title-cont title" id="continfo-title">CONTACT INFO</div>
-
-            
-        <div class="contact-details">
-            <div class="contact-details-names">
-                <ul>
-                    <li>Address:</li>
-                    <li>&nbsp;</li>
-                    <li>Phone:</li>
-                    <li>Email:</li>
-                    <li>Fax:</li>
-                </ul>
-            </div>
-            <div class="contact-details-content">
-                <ul>
-                    <li id="adress-target">AREP CENTER 1 traverse des Brucs 06560 Valbonne, FRANCE</li>
-                    <li>+33 9 84 23 77 19</li>
-                    <li>info@laserbiolabs.com</li>
-                    <li>+33 4 92 94 01 43</li>
-                </ul>
-            </div>
-        </div>
-        
-      <div class="mailto-cont">
-           <a class="mailto-btt" href="mailto:info@laserbiolabs.com">
-                <div class="mailto-text">  Email Us</div> 
-            </a>
-      </div> 
-
-</div> <!--  end of subgrid container -->
 
 
-<!-- ------------------------------------------FOOTER---------------------------------------------------- -->
-<div class="footer">
-            <ul class="footer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="faq.html">Order</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>             
-            </ul>
-        <ul class="footer-text">           
-            <li id="footer-text-contact"><span >Contact us:</span></li>
-            <li id="footer-text-phone"><span >+33 9 84 23 77 19</span></li>
-            <li id="footer-text-mail"><span>info@laserbiolabs.com</span></li>
-        </ul>
-
-        <div class="footer-img-cont">
-            <img id="footer-logo" src="images/logo_LBL.svg" alt="logo laserbio labs">
-        </div>
-
-        <div class="footer-copyright">
-            <span>Copyright ©2019 All rights reserved</span>
-        </div>
-</div>
-        
 
 
-</div>
-<!-- ------------------------------------------END OF MAIN CONTAINER---------------------------------------------------- -->
-
-<script src="js/jQuery.min.js"></script>  <!--KEEP THAT BEFORE THE SCRIPT THAT USES IT!!! -->
-        <!-- <script src="js/main.js"></script> -->
-        <!-- <script src="js/scripts.js"></script> -->
-        <script src="js/scripts.min.js"></script>
-
-        <!-- <script src="js/bootstrap.min.js"></script> -->
-        
-        </body>
-        
-        </html>
-        

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{ cat partials/head.html }}
+        <title>LaserBio Labs | Catalog</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        {{ cat partials/nav.html }}
+        <section class="">
+            <h1 class="section-title">Catalog</h1>
+        </section>
+        {{ ./catalog.jq catalog.json}}
+
+
+        <div id="maldi-imaging-solutions" class="product-section">
+            <div class="product-text-img-title-cont">
+                <div class="product-text-title-cont">
+
+                    <h1 class="product-section-title"> MALDI imaging solutions </h1>
+                    <p>
+                    For perfect results in MALDI imaging experiments, we offer a
+                    range of products from highly purified MALDI matrices to
+                    ITO-coated slides in various packages.
+                    <br>
+                    Our dedicated Imaging starter kits provides a specially
+                    tailored slide holder and consumableds needed to run MALDI
+                    imaging experiments, including conductive slides,
+                    water-sensitive paper for control of spray conditions, mass
+                    calibrants and MALDI matrices.
+                    </p>
+                </div>
+                    <img src="images/products--maldi-imaging-solutions.webp">
+            </div>
+            <table id="maldi-table">
+                <tr><td><b>IMG-001</b> </td><td> MALDI imaging starter kit for ABI 4800                     </td><td class="product-price"> 700 € </td></tr>
+                <tr><td><b>IMG-101</b> </td><td> MALDI imaging started kit / generic                        </td><td class="product-price"> 485 € </td></tr>
+                <tr><td><b>IMG-102</b> </td><td> ITO slides (25)                                            </td><td class="product-price"> 150 € </td></tr>
+                <tr><td><b>IMG-103</b> </td><td> ITO slides (100)                                           </td><td class="product-price"> 600 € </td></tr>
+                <tr><td><b>IMG-104</b> </td><td> Water-sensitive paper - 26x76 mm (Pack of 25)              </td><td class="product-price"> 50 €  </td></tr>
+                <tr><td><b>IMG-105</b> </td><td> Double-side conductive copper tape - 25 mm (Pack of 20)    </td><td class="product-price"> 50 €  </td></tr>
+                <tr><td><b>IMG-106</b> </td><td> Double-side adhesive for glass slides                      </td><td class="product-price"> 30 €  </td></tr>
+                <tr><td><b>IMG-107</b> </td><td> Image Mix 1 - Calibration standards - MSI small molecules  </td><td class="product-price"> 185 € </td></tr>
+                <tr><td><b>IMG-108</b> </td><td> Image Mix 2 - Calibration standards - MSI peptides         </td><td class="product-price"> 185 € </td></tr>
+                <tr><td><b>IMG-109</b> </td><td> Image Mix 3 - Calibration standards - MSI proteins         </td><td class="product-price"> 185 € </td></tr>
+                <tr><td><b>IMG-110</b> </td><td> Matrix & Calibrants MSI starter pack                       </td><td class="product-price"> 215 € </td></tr>
+            </table>
+            <div class="product-cont">
+                <h2 class="maldi-product-title">MALDI imaging starter kit product description</h2>
+                <p>
+                Kit IMG-001 is designed for MALDI imaging applications with the
+                Applied Biosystems / Sciex 4800 and 5800 MALDI TOF/TOF systems. The
+                kit contains a specially designed microscope slide adaptor based on
+                an Opti-TOF® LC-MALDI insert. The insert holds two microscope
+                slides for MALDI imaging experiments.
+                <br><br>
+                In order to facilitate the setup of imaging experiments and provide a complete
+                solution, the kit also contains the following components:
+                <br><br>
+                - 25 ITO-coated conductive microscope slides. LaserBio Labs offers ITO slides
+                marked on the conductive side for easier handling
+                <br><br>
+                - 25 pieces of water-sensitive paper for spray control. The water-sensitive
+                paper is coated with a chemical that turns blue when sprayed with liquid. The
+                papers are the size of miscroscope slides and will allow for optimization of
+                matrix spray conditions.
+                <br><br>
+                - 25 pieces of double-side adhesive conductive tape. The tape is used to ensure
+                electrical contact of the microscope slides with the adapter and to mount
+                tissue or material without glass slides.
+                <br><br>
+                - 50 pieces of double-sided adhesive to affix the microscope slides in
+                Opti-TOF® holder
+                <br> <br>
+                - A Matrix & Calibrants MALDI Imaging starter pack. The pack includes peptides
+                and protein mixes for calibration of samples in the small molecule, peptide and
+                protein mass ranges. MALDI matrix (CHCA and SA) is also included for method
+                development
+                <br> <br>
+                - A kit brochure
+
+                </p>
+
+            </div>
+            </div>
+
+            {{ cat partials/footer.html}}
+    </body>
+
+</html>
+
+
+
+
+

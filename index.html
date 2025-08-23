@@ -1,178 +1,65 @@
 <!DOCTYPE html>
-
 <html lang="en">
+    <head>
+        {{ cat partials/head.html }}
+        <title>LaserBio Labs | Home</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link href='style.css' rel='stylesheet'>
+        {{ cat partials/nav.html }}
+        <section class="section-left background-protein">
+        <h2 class="highlight">Serving science since 2001</h2>
+        <h1 class="section-title">LaserBio Labs</h1>
+        <div class="subtext">
+            LaserBio Labs was founded in 2001, with the goal of providing high-quality and <br>
+            affordable solutions for MALDI-TOF mass spectrometry to laboratories worldwide.<br>
+            Our mission is to bring to our customers products of the highest purity tailored to<br>
+            their exact needs. 
+        <div>
+        </section>
 
+        <section class="section-right background-map">
+        <h2 class="highlight">A global network of clients</h2>
+        <h1 class="section-title">500+ customers<br>around the world</h1>
+        <div class="subtext right-subtext">
+            LaserBio Labs is located in the Sophia Antipolis research<br>
+            cluster near Nice, on the French Riviera. We serve<br>
+            mass spectrometry laboratories throughout the world.
+        <div>
+        </section>
 
-    <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
-
-    <!-- Title -->
-    <title>Laserbio Labs - Home</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="images/logoLBL.gif">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145853038-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-145853038-1');
-    gtag('config', 'UA-153407692-2');
-    </script>
-
-</head>
-<body>
-
-    <div class='container' id='ind-main-container'>
-        
-        <div class="top-banner">
-                <div class="logo-cont"><img src='images/logo_LBL.svg' alt='Laserbio Labs logo' class="LBL-small-logo"></div>
-                <div class="navbar"><!--NAVIGATION MENU-->
-                        <div class="dropdown">
-                            <div class="dropbtn"><a class="nav-links curr-nav-link" href="index.html">Home</a></div> 
-                            <div class="dropdown-content">
-                                    <a class="sub-nav-links" href="index.html#about-anchor">About</a>
-                            </div>  
-                            </div>
-                        <!-- <div><a href="index.html#about-anchor" id="about" class="nav-links">About</a></div> -->
-                        <!-- <div><a href="" id="products" class="nav-links dropdown">Products</a> -->
-                        <div class="dropdown">
-                            <div class="dropbtn"><a class="nav-links" href="products.html">Products</a></div> 
-                            <div class="dropdown-content">
-                                <a class="sub-nav-links" href="products.html#mat-anchor">Matrices</a>
-                                <a class="sub-nav-links" href="products.html#cal-anchor">Calibrants</a>
-                                <a class="sub-nav-links" href="products.html#dig-anchor">Digests</a>
-                                <a class="sub-nav-links" href="products.html#imag-anchor">Imaging</a>
-                                <a class="sub-nav-links" href="products.html#ckits-anchor">Custom kits</a>
-                            </div>                           
-                        </div>
-                        <div class="dropdown">
-                            <div class="dropbtn"><a class="nav-links" href="faq.html" id="orderFAQ">Order</a></div>
-                            <div class="dropdown-content">
-                                    <a class="sub-nav-links" href="faq.html#howto-anchor">How to order</a>
-                                    <a class="sub-nav-links" href="faq.html#faq-anchor">F.A.Q.</a>
-                            </div>  
-                        </div>
-                        <div class='dropbtn'><a href="resources.html" id="resources" class="nav-links">Resources</a></div>
-                        <div class='dropbtn'><a href="contact.html" id="contact" class="nav-links">Contact</a></div>
-                    </div> <!--END OF NAVIGATION MENU-->
-        </div> <!--END OF TOP BANNER-->
-
-<!-- BACKGROUND IMAGE (now defined in css as background directly) -->
-        <!-- <div class="bg_picture bckg-pic-index"> <img src='images/bckg_tubes2.webp' width=100% height=auto alt='generic lab image'></div> -->
-
-
-        <div class="welcome-txt"><i>Serving the mass spectrometry community since 2001</i></div>
-
-        <!-- <div class="logo-cont-LBL2"><img id='logo-LBL2' src='images/logo_banner_modif2.webp' width=100% height=auto alt='Logo Laserbio Labs'></div> -->
-        <!-- <div class="logo-cont-LBL2"><img id='logo-LBL2' src='images/logo_main.svg' width=100% height=auto alt='Logo Laserbio Labs'></div> -->
-        <div class="logo-cont-LBL2"><img id='logo-LBL2' src='images/logo_main.svg' alt='Logo Laserbio Labs'></div>
-
-
-        <div class="prot-bckg"></div>
-            <div class="about-container">
-                <div id="about-anchor"></div>
-                <div class='about-title title'>ABOUT US</div>
-                <div id="about-us1">LaserBio Labs was founded in 2001, with the goal of providing high-quality and affordable solutions for MALDI-TOF mass spectrometry to laboratories worldwide.
-                    Our mission is to bring to our customers products of the highest purity tailored to their exact needs
-                </div>
-                <div id="about-us2">LaserBio Labs is located in the Sophia Antipolis research cluster near Nice, on the French Riviera.
-                        We serve mass spectromety laboratories throughout the world, with more than 500 customers in 42 countries
-                </div>
-
-                <!-- height param. is auto (below) to preserve images ratio -->
-                <!-- <div  id="ab-cont-img1"><img class="about-us-img" id="ab-img1" src='images/notexin_snake_PLA2_nobkg.webp' alt='Notexin Snake PLA2'></div> -->
-                <div  id="ab-cont-img2"><img class="about-us-img" id="ab-img2" src='images/antibes_crop_scaled.webp'  alt='Antibes French Riviera'></div>
-                <!-- <div  id="ab-cont-img3"><img class="about-us-img" id="ab-img3"src='images/vial-background.webp' alt='Test tubes'></div> -->
-            </div>
-            <!-- width=100% height=auto  -->
-        <div class="blanck-bckg1"></div>
-
-        <div class ="btt-container">
-                <div class="backtotop">
-                    <a href="#ind-main-container" class="backtotop btt-link">
-                        <img class="btt-img" src="images/backtotop-no-bg.webp" alt="back to top button">
-                    </a>
-                </div>
-            </div>
-
-
-    <div class="world-map-cont">
-            <div class="world-map">
-                    <div class="world-map-title title">500+ CUSTOMERS IN 42 COUNTRIES</div> 
-                    <div class="anim-anchor"> </div>
-                    <img class="world-map-img1 .world-map-img" src="images/world_map_noicons.webp" alt="">
-                    <img class="world-map-img2 .world-map-img" src="images/icons.webp" alt="">
-
-            </div>
-            <div class="theytrustus">
-                <div class="theytrustus-title title">THEY TRUST US</div>   
-                <div class="theytrustus-gallery" >
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/biorad.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/CNRS.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/Cold_Spring_Harbor_lab.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/John_Hopkins.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/KRA.webp" alt=""> </div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/kratos.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/MonashUni.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/NUS.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/sciex.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/Shimadzu.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/sigma.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/thermo.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/TSRI.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/UCSF.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/Vanderbilt_Uni.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/wwr.webp" alt=""></div>
-                        <div class="theytrustus-cont"><img class="theytrustus-img" src="images/clients/NovoNordisk.webp" alt=""></div>
-                </div>  
-            </div>
-         </div>
- 
-<!-- ------------------------------------------FOOTER---------------------------------------------------- -->
-    <div class="footer">
-        <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="faq.html">Order</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="contact.html">Contact</a></li>             
-        </ul>
-        <ul class="footer-text">
-            <li id="footer-text-contact"><span >Contact us:</span></li>
-            <li id="footer-text-phone"><span >+33 9 84 23 77 19</span></li>
-            <li id="footer-text-mail"><span>info@laserbiolabs.com</span></li>
-        </ul>
-
-        <div class="footer-img-cont">
-            <img id="footer-logo" src="images/logo_LBL.svg" alt="logo laserbio labs">
-        </div>
-
-        <div class="footer-copyright">
-            <span>Copyright ©2019 All rights reserved</span>
-        </div>
-    </div>
+        <section class="section-center">
+        <h2 class="highlight">High-quality reageants for research</h2>
+        <h1 class="section-title">They all trust us</h1>
+        <div id="client-gallery">
             
+            
+            <img class="client-img" src="images/client--biorad-grey.png">
+            <img class="client-img" src="images/client--cnrs-grey.png">
+            <img class="client-img" src="images/client--eth-grey.png">
+            <img class="client-img" src="images/client--john_hopkins-grey.png">
+            <img class="client-img" src="images/client--kra-grey.png">
+            <img class="client-img" src="images/client--kratos-grey.png">
+            <img class="client-img" src="images/client--monashuni-grey.png">
+            <img class="client-img" src="images/client--novonordisk-grey.png">
+            <img class="client-img" src="images/client--nus-grey.png">
+            <img class="client-img" src="images/client--sciex-grey.png">
+            <img class="client-img" src="images/client--shimadzu-grey.png">
+            <img class="client-img" src="images/client--sigma-grey.png">
+            <img class="client-img" src="images/client--thermo-grey.png">
+            <img class="client-img" src="images/client--tsri-grey.png">
+            <img class="client-img" src="images/client--ucsf-grey.png">
+            <img class="client-img" src="images/client--vanderbilt_uni-grey.png">
+            <img class="client-img" src="images/client--wwr-grey.png">
+        </div>
+        </section>
 
-
-</div>
-<!-- ------------------------------------------END OF MAIN CONTAINER---------------------------------------------------- -->
-
-
-<script src="js/jQuery.min.js"></script>  <!--KEEP THAT BEFORE THE SCRIPT THAT USES IT!!! -->
-    <!-- <script src="js/main.js"></script> -->
-    <!-- <script src="js/scripts.js"></script> -->
-    <script src="js/scripts.min.js"></script>
-
-    <!-- <script src="js/bootstrap.min.js"></script> -->
-
-</body>
+        {{ cat partials/footer.html}}
+    </body>
 
 </html>
+
+
+
