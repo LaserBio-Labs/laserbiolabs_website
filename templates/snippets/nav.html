@@ -1,7 +1,10 @@
-<nav id="header-nav">
-    <span id="header-logo-cont">
+<!--
+<nav class="navbar">
+     <div class="navbar-brand">
+    <a class="navbar-item" href="/">
         <img id="header-logo" src="static/images/logo_LBL.png">
-    </span>
+    </a>
+
     <span class="header-nav-item"> <a href="index.html">Home</a>                  </span>
     <span class="header-nav-item dropbtn"> 
         <a href="catalog.html">Catalog  &#8628;</a>
@@ -22,7 +25,46 @@
 </nav>
 
 
+-->
 
 
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img id="header-logo" src="static/images/logo_LBL.png">
+            <h3>LaserBio Labs</h3>
+        </a>
 
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
 
+    <div id="navbar-menu" class="navbar-menu">
+        <div class="navbar-end">
+            <a class="navbar-item"> Home </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link"> Catalog </a>
+
+                <div class="navbar-dropdown"> 
+                    <a class="navbar-item">   Matrix kits </a>
+                    <a class="navbar-item">   Bulk Matrix </a>
+                    <a class="navbar-item">   Peptide calibration mixtures </a>
+                    <a class="navbar-item">   Protein calibration mixtures </a>
+                    <a class="navbar-item">   Calibration kits </a>
+                    <a class="navbar-item">   Protein trypsin digest kits </a>
+                    <a class="navbar-item">   MALDI imaging solutions </a>
+                </div>
+            </div>
+
+            <!-- end of drop down menu -->
+            <a class="navbar-item"> How to order </a>
+            <a class="navbar-item"> FAQ </a>
+            <a class="navbar-item"> Contact </a>
+        </div>
+    </div>
+</nav>
