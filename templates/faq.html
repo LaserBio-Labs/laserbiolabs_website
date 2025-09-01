@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %} FAQ {% endblock %}
+{% block page_content %} 
+
+<section class="">
+
+    <h1 class="section-title">Frequently asked questions</h1>
+    { include faq.yaml | ./faq.awk }
+</section>
+
+{% endblock%}
