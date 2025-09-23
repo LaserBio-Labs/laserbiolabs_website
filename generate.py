@@ -1,5 +1,6 @@
 import os
 import shutil
+import json
 #import yaml
 from jinja2 import Environment, FileSystemLoader
 
@@ -7,13 +8,17 @@ from jinja2 import Environment, FileSystemLoader
 env = Environment(loader=FileSystemLoader('templates'))
 
 # Pages to render (map route to template and data)
+with open('data/faq.json', 'r') as f:
+    faq_data = json.load(f)
+
 pages = [
-    {'route': 'index.html', 'template': 'index.html', 'data': {}},
-    {'route': 'catalog.html', 'template': 'catalog.html', 'data': {}},
-    {'route': 'how_to_order.html', 'template': 'how_to_order.html', 'data': {}},
-    {'route': 'faq.html', 'template': 'faq.html', 'data': {}},
-    {'route': 'contact.html', 'template': 'contact.html', 'data': {}},
+    {'route':  'index.html',         'template':  'index.html',         'data':  {}},
+    {'route':  'catalog.html',       'template':  'catalog.html',       'data':  {}},
+    {'route':  'how_to_order.html',  'template':  'how_to_order.html',  'data':  {}},
+    {'route':  'faq.html',           'template':  'faq.html',           'data':  {"faq_data": faq_data}},
+    {'route':  'contact.html',       'template':  'contact.html',       'data':  {}},
 ]
+
 
 # Load data if available
 #if os.path.exists('data/pages.yaml'):

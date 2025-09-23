@@ -2,10 +2,95 @@
 {% block title %} FAQ {% endblock %}
 {% block page_content %} 
 
-<section class="">
+<section class="section">
 
-    <h1 class="section-title">Frequently asked questions</h1>
-    { include faq.yaml | ./faq.awk }
+    <h1 class="title is-2 has-text-centered">Frequently asked questions</h1>
+    <h4 class="subtitle title is-4 has-text-centered">Find answers to common questions about our products and services</h1>
+
+
+    <!-- Single section -->
+    <div class="container">
+      {% for section in faq_data %}
+        <div class="box">
+        <h2 class="title is-4">{{ section.section_title }}</h2>
+        
+        {% for q in section.questions %}
+          <details class="panel">
+            <summary class="panel-heading">
+              {{ q.question }}
+              <span class="icon is-pulled-right">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </summary>
+            <div class="panel-block">
+              <p>{{ q.answer | safe }}</p>  {# Use | safe if answer contains HTML like <br> #}
+            </div>
+          </details>
+          <hr>
+        {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+        
+    <!--
+    <div class="container">
+        <h3 class="title is-4">Shipping & Invoicing</h3>
+
+        <details class="panel is-primary">
+            <summary class="panel-heading is-flex">
+                <p>How will my order be shipped ?</p>
+                <span class="icon is-medium">
+                    <i class="fas fa-chevron-down"></i>
+                </span>
+            </summary>
+            <div class="panel-block">
+                <p>
+                We ship via FEDEX unless instructed otherwise. Shipping charges represent the exact costs
+                and LaserBio Labs does not apply any additional margin to shipping fees. To lower your
+                shipping costs you may provide your institution's FEDEX account number.<br> Upon request we
+                also can use DHL or regular postal service. In the latter case no parcel tracking can be
+                offered<br><br>All products are shipped at room temperature
+                </p>
+            </div>
+        </details>
+    </div>
+    -->
+</section>
+
+<section class="section">
+    <div class="container is-flex is-flex-direction-column is-align-items-center">
+        <h3 class="subtitle is-5 has-text-centered">Still have questions ?</h3>
+        <p class="has-text-centered mb-5">
+            Our technical support team is here to help with any additional questions about our products or applications.
+        <p>
+        <div>
+            <button class="button">Email technical support</button>
+            <button class="button">Contact sales team</button>
+        </div>
+    </div>
 </section>
 
 {% endblock%}
+
+<!--
+---
+faq:
+  - question: How will my order be shipped?
+  - question: What is delivery time?
+    answer: Delivery time is normally 1 to 5 days with FEDEX depending on the country of destination. Please contact us for specific information
+  - question: Can I pay for my order with a credit card?
+    answer: Unfortunately not. We do not accept credit card payments anymore as too few customers are using this means of payment
+  - question: Can I get a quote or an invoice in a different currency?
+    answer: No, we do not provide documents labeled in currencies other than Euros. However upon request, the corresponding amounts in non-Euro currencies can be indicated on your quote or invoice at the current exchange rate. Please contact us for specific demands
+  - question: Can I get a discount on my order?
+    answer: LaserBio Labs' pricing policy is to offer the right price for its products and not to artificially inflate the catalog list prices in order to offer discounts as a marketing strategy. Prices are therefore not discounted. For large orders superior to 1000.00 Euros, please contact us
+  - question: Will transit temperatures affect the performance of the products ?
+    answer: No, as all products are shipped in dried form and are therefore insensitive to heat-induced degradation
+  - question: How should I store my products upon reception ?
+    answer: Upon reception products should be stored according to recommendations (4°C for matrix and -20°C for calibrants and digests). See the kit brochure for specific instructions
+  - question: What is product lifetime ?
+    answer: We give our products a one-year expiration limit after they leave our facilities. However, if proper storage and handling recommendations are followed, product lifetime is much longer, up to several years<br> For products stored at -20°C after dilution in solvent, freeze/thaw cycles should be kept as short as possible
+  - question: Are there Materials Safety Data Sheets available ?
+    answer: Yes. For non-European customers, please contact us if the MSDS has not been forwarded by the shipping service<br> MSDS are not included in intra-European shipments, please contact us to obtain one
+...
+-->

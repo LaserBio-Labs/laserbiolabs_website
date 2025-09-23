@@ -169,8 +169,24 @@ section{
 
 /*------------ FAQ -------------*/
 
+details.panel summary::-webkit-details-marker {
+  display: none;
+}
+details.panel summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+details.panel[open] .panel-heading .icon {
+  transform: rotate(180deg);
+}
+details.panel .panel-block {
+  border-top: none; /* Remove top border to blend with heading */
+}
 
-.faq-section{
+/*.faq-section{
     margin: 15px;
 }
 .faq-title{
@@ -183,6 +199,7 @@ section{
     opacity: 0.1;
     margin: 15px 0;
 }
+*/
 
 /*------------ CATALOG -------------*/
 img[src="null"]{
