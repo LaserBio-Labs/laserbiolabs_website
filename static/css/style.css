@@ -202,6 +202,13 @@ details.panel .panel-block {
 */
 
 /*------------ CATALOG -------------*/
+.catalog-card-description {
+    display: flex!important;
+    height: 150px !important; /* Fixed height for the entire card; adjust as needed */
+    overflow: hidden !important; /* Prevent content from spilling out of the card */
+    text-overflow: ellipsis !important;
+}
+    /*
 img[src="null"]{
     display: none;
 }
@@ -216,11 +223,9 @@ img[src="null"]{
 }
 .product-text-img-title-cont{
     display: flex;
-    /*border: 1px solid red;*/
     margin: 15px 50px;
 }
 .product-text-title-cont{
-    /*border: 1px solid blue;*/
     display: flex;
     max-width: 600px;
     margin-right: 20px;
@@ -259,6 +264,7 @@ img[src="null"]{
     max-width: 350px;
 
 }
+*/
 
 /*------------ CATALOG -------------*/
 #maldi-table td{

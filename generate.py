@@ -11,9 +11,12 @@ env = Environment(loader=FileSystemLoader('templates'))
 with open('data/faq.json', 'r') as f:
     faq_data = json.load(f)
 
+with open('data/catalog.json', 'r') as f:
+    catalog_data = json.load(f)
+
 pages = [
     {'route':  'index.html',         'template':  'index.html',         'data':  {}},
-    {'route':  'catalog.html',       'template':  'catalog.html',       'data':  {}},
+    {'route':  'catalog.html',       'template':  'catalog.html',       'data':  {"catalog_data": catalog_data}},
     {'route':  'how_to_order.html',  'template':  'how_to_order.html',  'data':  {}},
     {'route':  'faq.html',           'template':  'faq.html',           'data':  {"faq_data": faq_data}},
     {'route':  'contact.html',       'template':  'contact.html',       'data':  {}},

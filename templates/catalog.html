@@ -2,9 +2,72 @@
 {% block title %} Catalog {% endblock %}
 {% block page_content %} 
 
-<section class="">
-    <h1 class="section-title">Catalog</h1>
+<section class="section">
+    <div class="container">
+        <h1 class="title is-2">Catalog</h1>
+        <h3 class="subtitle is-4">Comprehensive range of MALDI-TOF MS calibration standards and reagents</h3>
+    </div>
 </section>
+<section class="section">
+    <div class="container">
+        <!-- searchbar -->
+        <!-- category gallery -->
+    </div>
+    <div class="container">
+
+      {% for category in catalog_data %}
+        <h2 class="title is-4">{{ category.category }}</h2>
+        <hr>
+        <p>{{ category.description }}</>
+        <br><br>
+        <div class="fixed-grid has-3-cols">
+            <div class="grid">
+                {% for product in category.products %}
+                <div class="cell">
+                    <div class="card catalog-card">
+                        <a>
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="{{ category.img }}" alt="product category illustration" />
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <!--
+                                    <div class="media-left">
+                                        <figure class="image is-48x48">
+                                            <img src="https://bulma.io/assets/images/placeholders/96x96.png" alt="Placeholder image" />
+                                        </figure>
+                                    </div>
+                                    -->
+                                    <div class="media-content">
+                                        <p class="title is-4">{{ product.title }}</p>
+                                        <p class="subtitle is-6">{{ product.subtitle }}</p>
+                                    </div>
+                                    <div class="media-right">
+                                        {{ product.price }}
+                                    </div>
+                                </div>
+
+                                <div class="content catalog-card-description">
+                                    {{ product.description }}
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        
+      {% endfor %}
+    </div>
+</section>
+
+
+
+
 { ./catalog.jq catalog.json" }
 
 
