@@ -31,12 +31,17 @@
 
             <div class="column is-flex is-flex-direction-column">
                 <h4 class="title is-4">Products</h4>
+                <!--
                 <a href="/catalog.html"> Matrix Kits</a>
                 <a href="/catalog.html"> Bulk Matrix</a>
                 <a href="/catalog.html"> Peptide Calibration Mixtures</a>
                 <a href="/catalog.html"> Protein Calibration Mixtures</a>
                 <a href="/catalog.html"> Calibration Kits</a>
                 <a href="/catalog.html"> Protein Trypsin Digest Kits</a>
+                -->
+              {% for category in catalog_data %}
+                  <a href="/catalog.html#{{category.anchor}}">{{ category.category }}</a>
+              {% endfor %}
             </div>
 
             <div class="column is-flex is-flex-direction-column">

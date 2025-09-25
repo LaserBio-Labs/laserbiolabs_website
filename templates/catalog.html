@@ -16,7 +16,7 @@
     <div class="container">
 
       {% for category in catalog_data %}
-        <h2 class="title is-4">{{ category.category }}</h2>
+      <h2 class="title is-4" id="{{ category.anchor }}">{{ category.category }}</h2>
         <hr>
         <p>{{ category.description }}</>
         <br><br>

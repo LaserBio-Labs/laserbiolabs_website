@@ -51,6 +51,7 @@
                 <a class="navbar-link" href="/catalog.html"> Catalog </a>
 
                 <div class="navbar-dropdown"> 
+                    <!--
                     <a class="navbar-item">   Matrix kits </a>
                     <a class="navbar-item">   Bulk Matrix </a>
                     <a class="navbar-item">   Peptide calibration mixtures </a>
@@ -58,6 +59,10 @@
                     <a class="navbar-item">   Calibration kits </a>
                     <a class="navbar-item">   Protein trypsin digest kits </a>
                     <a class="navbar-item">   MALDI imaging solutions </a>
+                    -->
+                  {% for category in catalog_data %}
+                      <a class="navbar-item" href="/catalog.html#{{category.anchor}}">{{ category.category }}</a>
+                  {% endfor %}
                 </div>
             </div>
 
