@@ -16,11 +16,12 @@ with open('data/catalog.json', 'r') as f:
     catalog_data = json.load(f)
 
 pages = [
-    {'route':  'index.html',         'template':  'index.html',         'data':  {"catalog_data": catalog_data}},
-    {'route':  'catalog.html',       'template':  'catalog.html',       'data':  {"catalog_data": catalog_data}},
-    {'route':  'how_to_order.html',  'template':  'how_to_order.html',  'data':  {"catalog_data": catalog_data}},
-    {'route':  'faq.html',           'template':  'faq.html',           'data':  {"catalog_data": catalog_data, "faq_data": faq_data}},
-    {'route':  'contact.html',       'template':  'contact.html',       'data':  {"catalog_data": catalog_data}},
+    {'route':  'index.html',         'template':  'index.html',         'data':  {"catalog_data":  catalog_data}},               
+    {'route':  'catalog.html',       'template':  'catalog.html',       'data':  {"catalog_data":  catalog_data}},               
+    {'route':  'blog.html',          'template':  'blog.html',          'data':  {"catalog_data":  catalog_data}},               
+    {'route':  'how_to_order.html',  'template':  'how_to_order.html',  'data':  {"catalog_data":  catalog_data}},               
+    {'route':  'faq.html',           'template':  'faq.html',           'data':  {"catalog_data":  catalog_data,    "faq_data":  faq_data}},
+    {'route':  'contact.html',       'template':  'contact.html',       'data':  {"catalog_data":  catalog_data}},               
 ]
 
 

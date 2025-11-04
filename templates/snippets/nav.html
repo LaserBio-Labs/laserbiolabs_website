@@ -1,75 +1,50 @@
-<!--
-<nav class="navbar">
-     <div class="navbar-brand">
-    <a class="navbar-item" href="/">
-        <img id="header-logo" src="static/images/logo_LBL.png">
-    </a>
+<div class="navbar-container" id="navbar-container">
+    <div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img id="header-logo" src="static/images/logo_LBL.png">
+                <h3>LaserBio Labs</h3>
+            </a>
 
-    <span class="header-nav-item"> <a href="index.html">Home</a>                  </span>
-    <span class="header-nav-item dropbtn"> 
-        <a href="catalog.html">Catalog  &#8628;</a>
-        <div class="dropdown-content">
-            <a href="catalog.html#matrix-kits">Matrix kits</a>
-            <a href="catalog.html#bulk-matrix">Bulk Matrix</a>
-            <a href="catalog.html#peptide-calibration-mixtures">Peptide calibration mixtures</a>
-            <a href="catalog.html#protein-calibration-mixtures">Protein calibration mixtures</a>
-            <a href="catalog.html#calibration-kits">Calibration kits</a>
-            <a href="catalog.html#protein-trypsin-digest-kits">Protein trypsin digest kits</a>
-            <a href="catalog.html#maldi-imaging-solutions">MALDI imaging solutions</a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-    </span>
 
-    <span class="header-nav-item"> <a href="how_to_order.html">How to order</a>   </span>
-    <span class="header-nav-item"> <a href="faq.html">FAQ</a>                     </span>
-    <span class="header-nav-item"> <a href="contact.html">Contact</a>             </span>
-</nav>
+        <div id="navbar-menu" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="/"> Home </a>
 
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="/catalog.html"> Catalog </a>
 
--->
-
-
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-            <img id="header-logo" src="static/images/logo_LBL.png">
-            <h3>LaserBio Labs</h3>
-        </a>
-
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
-
-    <div id="navbar-menu" class="navbar-menu">
-        <div class="navbar-end">
-            <a class="navbar-item" href="/"> Home </a>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="/catalog.html"> Catalog </a>
-
-                <div class="navbar-dropdown"> 
-                    <!--
-                    <a class="navbar-item">   Matrix kits </a>
-                    <a class="navbar-item">   Bulk Matrix </a>
-                    <a class="navbar-item">   Peptide calibration mixtures </a>
-                    <a class="navbar-item">   Protein calibration mixtures </a>
-                    <a class="navbar-item">   Calibration kits </a>
-                    <a class="navbar-item">   Protein trypsin digest kits </a>
-                    <a class="navbar-item">   MALDI imaging solutions </a>
-                    -->
-                  {% for category in catalog_data %}
-                      <a class="navbar-item" href="/catalog.html#{{category.anchor}}">{{ category.category }}</a>
-                  {% endfor %}
+                    <div class="navbar-dropdown"> 
+                        <!--
+                            <a class="navbar-item">   Matrix kits </a>
+                            <a class="navbar-item">   Bulk Matrix </a>
+                            <a class="navbar-item">   Peptide calibration mixtures </a>
+                            <a class="navbar-item">   Protein calibration mixtures </a>
+                            <a class="navbar-item">   Calibration kits </a>
+                            <a class="navbar-item">   Protein trypsin digest kits </a>
+                            <a class="navbar-item">   MALDI imaging solutions </a>
+                        -->
+                        {% for category in catalog_data %}
+                        <a class="navbar-item" href="/catalog.html#{{category.anchor}}">{{ category.category }}</a>
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
+                <!-- end of drop down menu -->
 
-            <!-- end of drop down menu -->
-            <a class="navbar-item" href="/how_to_order.html"> How to order </a>
-            <a class="navbar-item" href="/faq.html"> FAQ </a>
-            <a class="navbar-item" href="/contact.html"> Contact </a>
+                <a class="navbar-item" href="/blog.html"> Blog </a>
+                <a class="navbar-item" href="/how_to_order.html"> How to order </a>
+                <a class="navbar-item" href="/faq.html"> FAQ </a>
+                <a class="navbar-item" href="/contact.html"> Contact </a>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</div>
+</div>
