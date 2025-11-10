@@ -11,7 +11,7 @@ const faqData = [
                 answer:"Upon reception products should be stored according to recommendations (4°C for matrix and -20°C for calibrants and digests). See the kit brochure for specific instructions"
             },
             {
-                question:"What is product lifetime ?",
+                question:"What is the product lifetime ?",
                 answer:"We give our products a one-year expiration limit after they leave our facilities. However, if proper storage and handling recommendations are followed, product lifetime is much longer, up to several years<br> For products stored at -20°C after dilution in solvent, freeze/thaw cycles should be kept as short as possible"
             },
             {
@@ -24,7 +24,7 @@ const faqData = [
     category: "Shipping & invoicing",
         questions: [
             {
-                question:"What is delivery time?",
+                question:"What is the delivery time?",
                 answer:"Delivery time is normally 1 to 5 days with FEDEX depending on the country of destination. Please contact us for specific information"
             },
             {
