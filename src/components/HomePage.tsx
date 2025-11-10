@@ -117,7 +117,7 @@ export function HomePage({ onPageChange, onPostSelect }: HomePageProps) {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl mb-4 text-gray-900">Why Choose Laser Bio Labs?</h2>
+            <h2 className="text-3xl mb-4 text-gray-900">Why Choose LaserBio Labs?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We provide the highest quality calibration standards with unmatched precision and reliability
             </p>
@@ -151,9 +151,9 @@ export function HomePage({ onPageChange, onPostSelect }: HomePageProps) {
               />
             </div>
             <div>
-              <h2 className="text-3xl mb-6 text-gray-900">About Laser Bio Labs</h2>
+              <h2 className="text-3xl mb-6 text-gray-900">About LaserBio Labs</h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                With over a decade of experience in mass spectrometry, Laser Bio Labs has been at the 
+                With over a decade of experience in mass spectrometry, LaserBio Labs has been at the 
                 forefront of developing precision calibration standards for MALDI-TOF MS applications.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
@@ -211,7 +211,7 @@ export function HomePage({ onPageChange, onPostSelect }: HomePageProps) {
 
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-6">
-              Join hundreds of leading organizations who trust Laser Bio Labs for their mass spectrometry calibration needs
+              Join hundreds of leading organizations who trust LaserBio Labs for their mass spectrometry calibration needs
             </p>
             <Button 
               onClick={() => onPageChange('contact')}

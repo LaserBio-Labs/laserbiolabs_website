@@ -113,6 +113,32 @@ Best regards,`;
           </p>
         </div>
 
+
+        {/* Order Information */}
+        <div className="mt-12 bg-blue-50 rounded-lg p-6">
+          <h3 className="text-lg mb-3 text-gray-900">Ordering Information</h3>
+          <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-600">
+            <div>
+              <h4 className="font-medium text-gray-900 mb-2">How to Order</h4>
+              <ul className="space-y-1">
+                <li>• Click on any product to view detailed specifications</li>
+                <li>• Use "Request Quote" button to send email inquiry</li>
+                <li>• Receive quotation and availability confirmation</li>
+                <li>• Complete order via direct bank transfer</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-medium text-gray-900 mb-2">Payment & Shipping</h4>
+              <ul className="space-y-1">
+                <li>• Payment via direct bank transfer</li>
+                <li>• Net 30 payment terms for established customers</li>
+                <li>• Worldwide shipping available</li>
+                <li>• Temperature-controlled shipping when required</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         {/* Search and Filters */}
         <div className="mb-8 space-y-4">
           <div className="relative max-w-md">
@@ -291,31 +317,6 @@ Best regards,`;
             <p className="text-gray-500">No products found matching your criteria.</p>
           </div>
         )}
-
-        {/* Order Information */}
-        <div className="mt-12 bg-blue-50 rounded-lg p-6">
-          <h3 className="text-lg mb-3 text-gray-900">Ordering Information</h3>
-          <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-600">
-            <div>
-              <h4 className="font-medium text-gray-900 mb-2">How to Order</h4>
-              <ul className="space-y-1">
-                <li>• Click on any product to view detailed specifications</li>
-                <li>• Use "Request Quote" button to send email inquiry</li>
-                <li>• Receive quotation and availability confirmation</li>
-                <li>• Complete order via direct bank transfer</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-medium text-gray-900 mb-2">Payment & Shipping</h4>
-              <ul className="space-y-1">
-                <li>• Payment via direct bank transfer</li>
-                <li>• Net 30 payment terms for established customers</li>
-                <li>• Worldwide shipping available</li>
-                <li>• Temperature-controlled shipping when required</li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
