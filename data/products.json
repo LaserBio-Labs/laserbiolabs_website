@@ -1,0 +1,16 @@
+[
+  {
+    "section": "Matrix kits",
+    "anchor": "matrix-kits",
+    "text": "MALDI matrix kits contain pre-weighed tubes of recrystallized matrices and adapted solvent mixtures. They provide standard analytical conditions and eliminate the need for cumbersome daily preparation of fresh matrix. Recrystallized and cation-depleted matrix provides higher sensitivity and improved signal-to-noise ratio when compared to non-recrystallized standard product.",
+    "img": "https://images.unsplash.com/photo-1684853807644-428f89ce35fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGVtaWNhbCUyMHJlYWdlbnQlMjBib3R0bGVzfGVufDF8fHx8MTc1NjAyODgwM3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    "products": [
+      {
+        "title": "M001",
+        "price": "125 €",
+        "subtitle": "αCHCA matrix kit",
+        "text": "50 eppendorf tubes of recrystallized α-cyano-4-hydroxycinnamic acid (αCHCA) matrix (5 mg each) and one 50 mL solvent vial (50% acetonitrile in water /  0.1% Trifluoroacetic acid) for matrix preparation. <br> <br> <br>Applications:  MALDI-TOF analysis of peptides and proteins, Proteomics"
+      }
+    ]
+  }
+]

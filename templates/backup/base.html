@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include "snippets/head.html" %}
+        <title>LaserBio Labs | {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="static/css/style.css">
+    </head>
+    
+    <body>
+        {% include "snippets/nav.html" %}
+
+        {% block page_content %}{% endblock %}
+
+        {% include "snippets/footer.html" %}
+    </body>
+</html>

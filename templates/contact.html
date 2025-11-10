@@ -1,158 +1,37 @@
 {% extends "base.html" %}
-{% block title %} Contact {% endblock %}
-{% block page_content %} 
 
-
-
+{% block content %}
 <section class="section">
     <div class="container">
-        <h1 class="title is-2 has-text-centered">Contact Us</h1>
-        <h3 class="subtitle is-5 has-text-centered">Get in touch with our team for product inquiries, technical support, or general questions</h3>
+        <h1 class="title is-2">Contact Us</h1>
         <div class="columns">
-
-            <div class="column"> 
-                <div class="box">
-                    <h4 class="title is-5">Get in Touch</h4>
-                    <p>
-                    We're here to help with your MALDI-TOF calibration needs. Whether you need
-                    technical support, product information, or custom solutions, our team of experts
-                    is ready to assist you.
-                    </p>
-
-                    <div>
-                        <span class="icon">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                        <div class="is-flex is-flex-direction-column">
-                            <h4><b>Address</b></h4>
-                            <span>LaserBio Labs<br>AREP CENTER 1 traverse des Brucs<br>06560 Valbonne, FRANCE</span>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="icon">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                        <div class="is-flex is-flex-direction-column">
-                            <h4><b>Email</b></h4>
-                            <span>General: info@laserbiolabs.com</span>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="icon">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                        <div class="is-flex is-flex-direction-column">
-                            <h4><b>Phone</b></h4>
-                            <span>+33 9 84 23 77 19</span>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="icon">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                        <div class="is-flex is-flex-direction-column">
-                            <h4><b>Fax</b></h4>
-                            <span>+33 4 92 94 01 43</span>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="icon">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                        <div class="is-flex is-flex-direction-column">
-                            <h4><b>Business Hours</b></h4>
-                            <span>Monday - Friday: 9:00 - 17:00 CET</span>
-                            <span>Saturday - Sunday: Closed</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="column">
-                <div class="box"> 
-                    <h4 class="title is-5">Send us a message</h4>
-                    <div class="columns">
-
-                        <div class="column">
-                            <div class="field">
-                                <label class="label">Name*</label>
-                                <div class="control">
-                                    <input class="input" type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Organization</label>
-                                <div class="control">
-                                    <input class="input" type="text" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end of column -->
-
-                        <div class="column"> 
-                            <div class="field">
-                                <label class="label">Email*</label>
-                                <div class="control">
-                                    <input class="input" type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Phone</label>
-                                <div class="control">
-                                    <input class="input" type="text" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end of column -->
-
-                    </div>
-                    <!-- end of columns -->
-                    <div class="control">
-                        <label class="label">Inquiry Type</label>
-                        <div class="select">
-                            <select>
-                                <option selected disabled hidden value="">Select inquiry type</option>  <!-- Placeholder: hidden from dropdown -->
-                                <option>Product information</option>
-                                <option>Technical support</option>
-                                <option>Custom order request</option>
-                                <option>Pricing & quotation</option>
-                                <option>Partnership inquiry</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Subject</label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Brief description of your inquiry">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Message*</label>
-                        <div class="control">
-                            <textarea class="textarea" placeholder="Please provide details about your inquiry"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="is-flex is-flex-direction-column">
-                        <button class="button">Send Message</button>
-                        <span>*Required fields</span>
-                    </div>
+                {% for info in contact %}
+                <div class="mb-6">
+                    <h3 class="title is-4">{{ info.title }}</h3>
+                    {% for detail in info.details %}
+                    <p>{{ detail }}</p>
+                    {% endfor %}
                 </div>
+                {% endfor %}
+            </div>
+            <div class="column">
+                <form action="mailto:info@laserbiolabs.com" method="post" enctype="text/plain">
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input class="input" type="text" name="name">
+                        </div>
+                    </div>
+                    <!-- Add other fields similarly -->
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-primary" type="submit">Send</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    
 </section>
-<!--
-<section class="">
-    <h1 class="section-title">Contact<br>Information</h1>
-    <div class="subtext">
-        <b>Address:  </b>  AREP CENTER 1 traverse des Brucs 06560 Valbonne, FRANCE<br>
-        <b>Phone:    </b>   +33 9 84 23 77 19<br>
-        <b>Email:    </b>     info@laserbiolabs.com<br>
-    </div>
-</section>
--->
-
-{% endblock%}
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %} Blog {% endblock %}
+{% block page_content %} 
+<section class="section has-text-centered">
+    <div class="container">
+        <h1 class="title is-3">Insights from the lab</h1>
+        <h3 class="subtitle is-5 my-4">Discover how leading laboratories worldwide are achieving analytical excellence with our calibration standards. Real stories, proven results.</h3>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <h3>Featured article</h3>
+        <div class="card featured-card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img
+                src="https://bulma.io/assets/images/placeholders/1280x960.png"
+                alt="Placeholder image"
+              />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img
+                    src="https://bulma.io/assets/images/placeholders/96x96.png"
+                    alt="Placeholder image"
+                  />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+            </div>
+
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+              iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
+              <a href="#">#responsive</a>
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+{% endblock%}
+

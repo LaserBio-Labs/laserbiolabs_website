@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <a class="button is-light mb-6" href="/catalogue"><span class="icon"><i class="fas fa-arrow-left"></i></span><span>Back to Catalogue</span></a>
+        <div class="columns">
+            <div class="column is-two-thirds">
+                <img src="{{ product.image }}" alt="{{ product.name }}" class="mb-6">
+                {% if product.graph %}
+                <img src="{{ product.graph }}" alt="Graph" class="mb-6">
+                {% endif %}
+            </div>
+            <div class="column">
+                <h1 class="title is-3">{{ product.name }}</h1>
+                <p class="subtitle is-5">{{ product.price }}</p>
+                <div class="content" v-html="{{ product.text }}"></div>
+                {% if product.sidetext %}
+                <div class="box" v-html="{{ product.sidetext }}"></div>
+                {% endif %}
+                <a class="button is-primary is-fullwidth" href="mailto:info@laserbiolabs.com?subject=Inquiry for {{ product.name }}">Request Quote</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

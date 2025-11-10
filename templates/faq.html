@@ -1,50 +1,18 @@
 {% extends "base.html" %}
-{% block title %} FAQ {% endblock %}
-{% block page_content %} 
 
+{% block content %}
 <section class="section">
-
-    <h1 class="title is-2 has-text-centered">Frequently asked questions</h1>
-    <h4 class="subtitle title is-4 has-text-centered">Find answers to common questions about our products and services</h1>
-
-
-    <!-- Single section -->
     <div class="container">
-      {% for section in faq_data %}
-        <div class="box">
-        <h2 class="title is-4">{{ section.section_title }}</h2>
-        
-        {% for q in section.questions %}
-          <details class="panel">
-            <summary class="panel-heading">
-              {{ q.question }}
-              <span class="icon is-pulled-right">
-                <i class="fas fa-chevron-down"></i>
-              </span>
-            </summary>
-            <div class="panel-block">
-              <p>{{ q.answer | safe }}</p>  {# Use | safe if answer contains HTML like <br> #}
-            </div>
-          </details>
-          <hr>
+        <h1 class="title is-2">Frequently Asked Questions</h1>
+        {% for category in faq %}
+        <h2 class="title is-3 mt-8">{{ category.category }}</h2>
+        {% for q in category.questions %}
+        <details class="mb-4">
+            <summary class="has-text-weight-bold">{{ q.question }}</summary>
+            <p class="pl-4 pt-2">{{ q.answer }}</p>
+        </details>
         {% endfor %}
-        </div>
-      {% endfor %}
-    </div>
-        
-</section>
-
-<section class="section">
-    <div class="container is-flex is-flex-direction-column is-align-items-center">
-        <h3 class="subtitle is-5 has-text-centered">Still have questions ?</h3>
-        <p class="has-text-centered mb-5">
-            Our technical support team is here to help with any additional questions about our products or applications.
-        <p>
-        <div>
-            <button class="button">Email technical support</button>
-            <button class="button">Contact sales team</button>
-        </div>
+        {% endfor %}
     </div>
 </section>
-
-{% endblock%}
+{% endblock %}

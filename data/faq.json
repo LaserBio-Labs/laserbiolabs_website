@@ -1,45 +1,11 @@
 [
-    {
-        "section_title": "Shipping & invoicing",
-        "questions": [
-            {
-                "question":"What is delivery time?",
-                "answer":"Delivery time is normally 1 to 5 days with FEDEX depending on the country of destination. Please contact us for specific information"
-            },
-            {
-                "question":"Can I pay for my order with a credit card?",
-                "answer":"Unfortunately not. We do not accept credit card payments anymore as too few customers are using this means of payment"
-            },
-            {
-                "question":"Can I get a quote or an invoice in a different currency?",
-                "answer":"No, we do not provide documents labeled in currencies other than Euros. However upon request, the corresponding amounts in non-Euro currencies can be indicated on your quote or invoice at the current exchange rate. Please contact us for specific demands"
-            },
-            {
-                "question":"Can I get a discount on my order?",
-                "answer":"LaserBio Labs' pricing policy is to offer the right price for its products and not to artificially inflate the catalog list prices in order to offer discounts as a marketing strategy. Prices are therefore not discounted. For large orders superior to 1000.00 Euros, please contact us"
-            }
-        ]
-    },
-    {
-        "section_title": "Product & quality",
-        "questions": [
-            {
-                "question":"Will transit temperatures affect the performance of the products ?",
-                "answer":"No, as all products are shipped in dried form and are therefore insensitive to heat-induced degradation"
-            },
-            {
-                "question":"How should I store my products upon reception ?",
-                "answer":"Upon reception products should be stored according to recommendations (4°C for matrix and -20°C for calibrants and digests). See the kit brochure for specific instructions"
-            },
-            {
-                "question":"What is product lifetime ?",
-                "answer":"We give our products a one-year expiration limit after they leave our facilities. However, if proper storage and handling recommendations are followed, product lifetime is much longer, up to several years<br> For products stored at -20°C after dilution in solvent, freeze/thaw cycles should be kept as short as possible"
-            },
-            {
-                "question":"Are there Materials Safety Data Sheets available ?",
-                "answer": "Yes. For non-European customers, please contact us if the MSDS has not been forwarded by the shipping service<br> MSDS are not included in intra-European shipments, please contact us to obtain one"
-            }
-        ]
-
-    }
+  {
+    "category": "Products & Quality",
+    "questions": [
+      {
+        "question": "What makes your calibration standards different from competitors?",
+        "answer": "Our calibration standards are manufactured under ISO-certified conditions using the highest purity compounds available. Each batch undergoes rigorous quality control testing including HPLC analysis and mass spectrometry verification. We provide comprehensive certificates of analysis with each shipment, ensuring traceability and consistency."
+      }
+    ]
+  }
 ]

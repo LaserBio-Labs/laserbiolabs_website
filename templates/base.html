@@ -1,16 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        {% include "snippets/head.html" %}
-        <title>LaserBio Labs | {% block title %}{% endblock %}</title>
-        <link rel="stylesheet" href="static/css/style.css">
-    </head>
-    
-    <body>
-        {% include "snippets/nav.html" %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laser Bio Labs{% if title %} - {{ title }}{% endif %}</title>
+    <link rel="stylesheet" href="/static/css/bulma.min.css">
+    <style>
+        :root {
+            --font-size: 14px;
+            --background: #ffffff;
+            --foreground: oklch(0.145 0 0);
+            --card: #ffffff;
+            --card-foreground: oklch(0.145 0 0);
+            --popover: oklch(1 0 0);
+            --popover-foreground: oklch(0.145 0 0);
+            --primary: #030213;
+            --primary-foreground: oklch(1 0 0);
+            --secondary: oklch(0.95 0.0058 264.53);
+            --secondary-foreground: #030213;
+            --muted: #ececf0;
+            --muted-foreground: #717182;
+            --accent: #e9ebef;
+            --accent-foreground: #030213;
+            --destructive: #d4183d;
+            --destructive-foreground: #ffffff;
+            --border: rgba(0, 0, 0, 0.1);
+            --input: transparent;
+            --input-background: #f3f3f5;
+            --switch-background: #cbced4;
+            --font-weight-medium: 500;
+            --font-weight-normal: 400;
+            --ring: oklch(0.708 0 0);
+            --chart-1: oklch(0.646 0.222 41.116);
+            --chart-2: oklch(0.6 0.118 184.704);
+            --chart-3: oklch(0.398 0.07 227.392);
+            --chart-4: oklch(0.828 0.189 84.429);
+            --chart-5: oklch(0.769 0.188 70.08);
+            --radius: 0.625rem;
+            --sidebar: oklch(0.985 0 0);
+            --sidebar-foreground: oklch(0.145 0 0);
+            --sidebar-primary: #030213;
+            --sidebar-primary-foreground: oklch(0.985 0 0);
+            --sidebar-accent: oklch(0.97 0 0);
+            --sidebar-accent-foreground: oklch(0.205 0 0);
+            --sidebar-border: oklch(0.922 0 0);
+            --sidebar-ring: oklch(0.708 0 0);
+        }
 
-        {% block page_content %}{% endblock %}
+        body {
+            background-color: var(--background);
+            color: var(--foreground);
+            font-size: var(--font-size);
+        }
 
-        {% include "snippets/footer.html" %}
-    </body>
+        .button.is-primary {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        .button.is-primary:hover {
+            background-color: color-mix(in oklab, var(--primary) 90%, transparent);
+        }
+
+        /* Add more overrides as needed to match original styling */
+    </style>
+</head>
+<body>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <span class="icon"><i class="fas fa-flask"></i></span> <!-- Assume Font Awesome for icons -->
+                <span>Laser Bio Labs</span>
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/">Home</a>
+                <a class="navbar-item" href="/catalogue">Catalogue</a>
+                <a class="navbar-item" href="/blog">Blog</a>
+                <a class="navbar-item" href="/faq">FAQ</a>
+                <a class="navbar-item" href="/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>&copy; 2025 Laser Bio Labs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </html>

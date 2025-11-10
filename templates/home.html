@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero is-medium is-light">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title is-1">Precision MALDI-TOF MS Calibration Standards</h1>
+            <p class="subtitle is-3">Leading manufacturer of high-quality calibration kits for mass spectrometry</p>
+            <div class="buttons">
+                <a class="button is-primary is-large" href="/catalogue">View Catalogue</a>
+                <a class="button is-light is-large" href="/contact">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="title is-2 has-text-centered">Why Choose Laser Bio Labs?</h2>
+        <div class="columns">
+            {% for feature in features %}
+            <div class="column">
+                <div class="card">
+                    <div class="card-content has-text-centered">
+                        <span class="icon is-large mb-4"><i class="fas fa-{{ feature.icon.lower() }}"></i></span> <!-- Assume FA icons -->
+                        <h3 class="title is-4">{{ feature.title }}</h3>
+                        <p>{{ feature.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section is-medium has-background-light">
+    <div class="container">
+        <h2 class="title is-2 has-text-centered">They Trust Us</h2>
+        <div class="columns">
+            {% for client in trusted %}
+            <div class="column">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-1by1">
+                            <img src="{{ client.image }}" alt="{{ client.name }}">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="title is-5">{{ client.name }}</h3>
+                        <p class="subtitle is-6">{{ client.category }}</p>
+                        <a href="/blog/{{ client.id }}">Read Story</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
