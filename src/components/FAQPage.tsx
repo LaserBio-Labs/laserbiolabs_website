@@ -1,6 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { faqData } from '../data/faq.tsx';
+import { faqData } from '../data/faq';
 
 export function FAQPage() {
   return (
@@ -32,7 +32,7 @@ export function FAQPage() {
                         {item.question}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-600 leading-relaxed">
-                        {item.answer}
+                        <div dangerouslySetInnerHTML={{ __html: item.answer }} />
                       </AccordionContent>
                     </AccordionItem>
                   ))}

@@ -1,14 +1,18 @@
 import { useState } from 'react';
-import { Menu, X, Beaker } from 'lucide-react';
+import { Menu, X, Beaker, FileText } from 'lucide-react';
 import { Button } from './ui/button';
+import { Badge } from './ui/badge';
+import { useQuote } from './QuoteContext';
 
 interface NavigationProps {
   currentPage: string;
   onPageChange: (page: string) => void;
+  onOpenQuote: () => void;
 }
 
-export function Navigation({ currentPage, onPageChange }: NavigationProps) {
+export function Navigation({ currentPage, onPageChange, onOpenQuote }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { totalItems } = useQuote();
 
   const navigationItems = [
     { id: 'home', label: 'Home' },
@@ -18,12 +22,6 @@ export function Navigation({ currentPage, onPageChange }: NavigationProps) {
     { id: 'contact', label: 'Contact' }
   ];
 
-  const handleNavigation = (pageId: string) => {
-    onPageChange(pageId);
-    // Update the URL without reloading the page
-    //window.history.pushState({ page: pageId }, '', `/${pageId === 'home' ? '' : pageId}`);
-  };
-
   return (
     <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,20 +29,21 @@ export function Navigation({ currentPage, onPageChange }: NavigationProps) {
           {/* Logo */}
           <div className="flex items-center">
             <button
-              onClick={() => handleNavigation('home')}
+              onClick={() => onPageChange('home')}
               className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors"
             >
               <Beaker className="h-8 w-8" />
-              <span className="text-xl font-semibold">Laser Bio Labs</span>
+              <span className="text-xl font-semibold">LaserBio Labs</span>
             </button>
           </div>
+
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          <div className="hidden md:flex items-center gap-4">
+            <div className="flex items-baseline space-x-4">
               {navigationItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => handleNavigation(item.id)}
+                  onClick={() => onPageChange(item.id)}
                   className={`px-3 py-2 rounded-md transition-colors ${
                     currentPage === item.id
                       ? 'bg-primary text-primary-foreground'
@@ -55,9 +54,45 @@ export function Navigation({ currentPage, onPageChange }: NavigationProps) {
                 </button>
               ))}
             </div>
+            
+            {/* Quote Button */}
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={onOpenQuote}
+              className="relative"
+            >
+              <FileText className="h-4 w-4 mr-2" />
+              Quote
+              {totalItems > 0 && (
+                <Badge 
+                  variant="destructive" 
+                  className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0 text-xs"
+                >
+                  {totalItems}
+                </Badge>
+              )}
+            </Button>
           </div>
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+
+          {/* Mobile menu and quote buttons */}
+          <div className="md:hidden flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={onOpenQuote}
+              className="relative"
+            >
+              <FileText className="h-4 w-4" />
+              {totalItems > 0 && (
+                <Badge 
+                  variant="destructive" 
+                  className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0 text-xs"
+                >
+                  {totalItems}
+                </Badge>
+              )}
+            </Button>
             <Button
               variant="ghost"
               size="sm"
@@ -71,6 +106,7 @@ export function Navigation({ currentPage, onPageChange }: NavigationProps) {
             </Button>
           </div>
         </div>
+
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden">
@@ -79,7 +115,7 @@ export function Navigation({ currentPage, onPageChange }: NavigationProps) {
                 <button
                   key={item.id}
                   onClick={() => {
-                    handleNavigation(item.id);
+                    onPageChange(item.id);
                     setIsMobileMenuOpen(false);
                   }}
                   className={`block w-full text-left px-3 py-2 rounded-md transition-colors ${

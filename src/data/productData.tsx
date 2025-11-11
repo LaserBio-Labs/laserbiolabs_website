@@ -348,4 +348,5 @@ const productCategoriesDescriptions = {
   "Protein trypsin digest kits": "Our protein digests kits contain calibrated peptide mixtures, obtained from controlled trypsin digestion of well characterized proteins. They provide quantified, standardized digests for proteomics and LC-MS applications and eliminate the variability and cumbersome preparation of trypsin digestions. Digests are prepared with pure natural proteins and conditioned, in a form adapted to everyday use in the mass spectrometry lab.",
   "MALDI imaging solutions": "For perfect results in MALDI imaging experiments, we offer a range of products from highly purified MALDI matrices to ITO-coated slides in various packages. Our dedicated Imaging starter kits provides a specially tailored slide holder and consumables needed to run MALDI imaging experiments, including conductive slides, water-sensitive paper for control of spray conditions, mass calibrants and MALDI matrices."
 };
+
 export { productData, productCategories, productCategoriesDescriptions };

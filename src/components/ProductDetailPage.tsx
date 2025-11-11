@@ -1,9 +1,11 @@
-import { ArrowLeft, Mail, Download, CheckCircle, AlertCircle } from 'lucide-react';
+import { ArrowLeft, Mail, Download, CheckCircle, AlertCircle, ShoppingCart } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Separator } from './ui/separator';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { useQuote } from './QuoteContext';
+import { toast } from 'sonner@2.0.3';
 import { productData, productCategoriesDescriptions } from '../data/productData';
 
 interface Product {
@@ -16,16 +18,6 @@ interface Product {
   graph?: string;
   image: string;
 }
-
-// Category descriptions
-//const productCategoriesDescriptions: Record<string, string> = {
-//  "Matrix kits": "MALDI matrix kits contain pre-weighed tubes of recrystallized matrices and adapted solvent mixtures. They provide standard analytical conditions and eliminate the need for cumbersome daily preparation of fresh matrix. Recrystallized and cation-depleted matrix provides higher sensitivity and improved signal-to-noise ratio when compared to non-recrystallized standard product.",
-//  "Bulk Matrix": "MALDI matrix kits contain pre-weighed tubes of recrystallized matrices and adapted solvent mixtures. They provide standard analytical conditions and eliminate the need for cumbersome daily preparation of fresh matrix. Recrystallized and cation-depleted matrix provides higher sensitivity and improved signal-to-noise ratio when compared to non-recrystallized standard product.",
-//  "Calibration kits": "Our calibration kits contain calibrated peptide and protein mixtures, designed for analytical reproducibility and consistent signal-to-noise ratio, as well as individual calibrants and diluent. They provide reproducible, standard analytical conditions to eliminate the need for cumbersome preparation of calibrant mixtures. They are prepared and conditioned with the highest purity chemicals, in a form adapted to everyday use in the mass spectrometry laboratory.",
-//  "Protein trypsin digest kits": "Our protein digests kits contain calibrated peptide mixtures, obtained from controlled trypsin digestion of well characterized proteins. They provide quantified, standardized digests for proteomics and LC-MS applications and eliminate the variability and cumbersome preparation of trypsin digestions. Digests are prepared with pure natural proteins and conditioned, in a form adapted to everyday use in the mass spectrometry lab.",
-//  "MALDI imaging solutions": "For perfect results in MALDI imaging experiments, we offer a range of products from highly purified MALDI matrices to ITO-coated slides in various packages. Our dedicated Imaging starter kits provides a specially tailored slide holder and consumables needed to run MALDI imaging experiments, including conductive slides, water-sensitive paper for control of spray conditions, mass calibrants and MALDI matrices."
-//};
-
 
 // Transform the data structure
 const products: Product[] = [];
@@ -51,6 +43,7 @@ interface ProductDetailPageProps {
 
 export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps) {
   const product = products.find(p => p.id === productId);
+  const { addItem } = useQuote();
 
   if (!product) {
     return (
@@ -68,29 +61,14 @@ export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps)
     );
   }
 
-  const handleOrderInquiry = () => {
-    const subject = `Order Inquiry - ${product.name} (${product.id})`;
-    const body = `Dear Laser Bio Labs,
-
-I would like to inquire about ordering the following product:
-
-Product: ${product.name}
-Product ID: ${product.id}
-Category: ${product.category}
-Price: ${product.price}
-
-Please provide information about:
-- Availability and lead time
-- Shipping costs
-- Payment terms
-- Technical specifications
-- Certificate of analysis
-
-Thank you for your assistance.
-
-Best regards,`;
-
-    window.location.href = `mailto:orders@laserbiolabs.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const handleAddToQuote = () => {
+    addItem({
+      id: product.id,
+      name: product.name,
+      category: product.category,
+      price: product.price
+    });
+    toast.success(`Added ${product.name} to quote`);
   };
 
   const handleDownloadDatasheet = () => {
@@ -169,9 +147,9 @@ Best regards,`;
                 </div>
                 
                 <div className="space-y-3">
-                  <Button onClick={handleOrderInquiry} className="w-full" size="lg">
-                    <Mail className="h-4 w-4 mr-2" />
-                    Request Quote
+                  <Button onClick={handleAddToQuote} className="w-full" size="lg">
+                    <ShoppingCart className="h-4 w-4 mr-2" />
+                    Add to Quote
                   </Button>
                   <Button 
                     variant="outline" 

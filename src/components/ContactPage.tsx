@@ -44,25 +44,32 @@ ${formData.message}`;
       icon: MapPin,
       title: 'Address',
       details: [
-        'LaserBio Labs',
-        'AREP CENTER 1 traverse des Brucs',
-        '06560 Valbonne, FRANCE'
+        'LaserBio Labs GmbH',
+        'Wissenschaftspark 1',
+        '50321 Brühl, Germany'
       ]
     },
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+33 (0) 9 84 23 77 19']
-    },
-    {
-      icon: Phone,
-      title: 'Fax',
-      details: ['+33 (0) 4 92 94 01 43']
+      details: ['+49 (0) 2232 123-456']
     },
     {
       icon: Mail,
       title: 'Email',
-      details: [  'info@laserbiolabs.com' ]
+      details: [
+        'General: info@laserbiolabs.com',
+        'Sales: sales@laserbiolabs.com',
+        'Support: support@laserbiolabs.com'
+      ]
+    },
+    {
+      icon: Clock,
+      title: 'Business Hours',
+      details: [
+        'Monday - Friday: 9:00 - 17:00 CET',
+        'Saturday - Sunday: Closed'
+      ]
     }
   ];
 
@@ -252,7 +259,7 @@ ${formData.message}`;
         <div className="mt-12 bg-blue-50 rounded-lg p-6">
           <h3 className="text-lg mb-4 text-gray-900">Response Times</h3>
           <div className="grid md:grid-cols-3 gap-6 text-sm">
-            {/*<div>
+            <div>
               <h4 className="font-medium text-gray-900 mb-2">Sales Inquiries</h4>
               <p className="text-gray-600">Response within 4-6 hours during business days</p>
             </div>
@@ -260,7 +267,6 @@ ${formData.message}`;
               <h4 className="font-medium text-gray-900 mb-2">Technical Support</h4>
               <p className="text-gray-600">Response within 24 hours, urgent issues prioritized</p>
             </div>
-            */}
             <div>
               <h4 className="font-medium text-gray-900 mb-2">General Inquiries</h4>
               <p className="text-gray-600">Response within 24-48 hours during business days</p>

@@ -5,6 +5,8 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Search, ShoppingCart } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { useQuote } from './QuoteContext';
+import { toast } from 'sonner@2.0.3';
 import { productData, productCategories } from '../data/productData';
 
 interface Product {
@@ -17,6 +19,7 @@ interface Product {
   graph?: string;
   image: string;
 }
+
 // Transform the data structure
 const products: Product[] = [];
 productData.forEach(section => {
@@ -34,16 +37,6 @@ productData.forEach(section => {
   });
 });
 
-//const productCategories = [
-//  'All',
-//  'Matrix kits',
-//  'Bulk Matrix',
-//  'Peptide calibration mixtures',
-//  'Protein calibration mixtures',
-//  'Calibration kits',
-//  'Protein trypsin digest kits'
-//];
-
 interface CataloguePageProps {
   onProductSelect?: (productId: string) => void;
 }
@@ -51,6 +44,7 @@ interface CataloguePageProps {
 export function CataloguePage({ onProductSelect }: CataloguePageProps) {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
+  const { addItem } = useQuote();
 
   const filteredProducts = products.filter(product => {
     const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
@@ -66,28 +60,15 @@ export function CataloguePage({ onProductSelect }: CataloguePageProps) {
     }
   };
 
-  const handleOrderInquiry = (e: React.MouseEvent, product: Product) => {
+  const handleAddToQuote = (e: React.MouseEvent, product: Product) => {
     e.stopPropagation();
-    const subject = `Order Inquiry - ${product.name} (${product.id})`;
-    const body = `Dear Laser Bio Labs,
-
-I would like to inquire about ordering the following product:
-
-Product: ${product.name}
-Product ID: ${product.id}
-Price: ${product.price}
-
-Please provide information about:
-- Availability and lead time
-- Shipping costs
-- Payment terms
-- Technical specifications
-
-Thank you for your assistance.
-
-Best regards,`;
-
-    window.location.href = `mailto:orders@laserbiolabs.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    addItem({
+      id: product.id,
+      name: product.name,
+      category: product.category,
+      price: product.price
+    });
+    toast.success(`Added ${product.name} to quote`);
   };
 
   // Helper function to strip HTML tags for description display
@@ -97,10 +78,7 @@ Best regards,`;
     return div.textContent || div.innerText || '';
   };
 
-  const getShortDescription = (description: string) => {
-    const stripped = stripHtml(description);
-    return stripped.length > 300 ? stripped.substring(0, 300) + '...' : stripped;
-  };
+  const categories = productCategories;
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
@@ -111,32 +89,6 @@ Best regards,`;
           <p className="text-xl text-gray-600">
             Comprehensive range of MALDI-TOF MS calibration standards and reagents
           </p>
-        </div>
-
-
-        {/* Order Information */}
-        <div className="mt-12 bg-blue-50 rounded-lg p-6">
-          <h3 className="text-lg mb-3 text-gray-900">Ordering Information</h3>
-          <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-600">
-            <div>
-              <h4 className="font-medium text-gray-900 mb-2">How to Order</h4>
-              <ul className="space-y-1">
-                <li>• Click on any product to view detailed specifications</li>
-                <li>• Use "Request Quote" button to send email inquiry</li>
-                <li>• Receive quotation and availability confirmation</li>
-                <li>• Complete order via direct bank transfer</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-medium text-gray-900 mb-2">Payment & Shipping</h4>
-              <ul className="space-y-1">
-                <li>• Payment via direct bank transfer</li>
-                <li>• Net 30 payment terms for established customers</li>
-                <li>• Worldwide shipping available</li>
-                <li>• Temperature-controlled shipping when required</li>
-              </ul>
-            </div>
-          </div>
         </div>
 
         {/* Search and Filters */}
@@ -152,7 +104,7 @@ Best regards,`;
           </div>
           
           <div className="flex flex-wrap gap-2">
-            {productCategories.map((category) => (
+            {categories.map((category) => (
               <Button
                 key={category}
                 variant={selectedCategory === category ? 'default' : 'outline'}
@@ -167,9 +119,9 @@ Best regards,`;
 
         {/* Products by Category */}
         {selectedCategory === 'All' ? (
-          // Show all productCategories with sections
+          // Show all categories with sections
           <div className="space-y-12">
-            {productCategories.filter(cat => cat !== 'All').map(category => {
+            {categories.filter(cat => cat !== 'All').map(category => {
               const categoryProducts = products.filter(product => product.category === category);
               const filteredCategoryProducts = categoryProducts.filter(product => {
                 const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -233,11 +185,11 @@ Best regards,`;
                           <Button 
                             variant="outline"
                             size="sm"
-                            onClick={(e) => handleOrderInquiry(e, product)}
+                            onClick={(e) => handleAddToQuote(e, product)}
                             className="w-full flex items-center justify-center gap-2"
                           >
                             <ShoppingCart className="h-4 w-4" />
-                            Request Quote
+                            Add to Quote
                           </Button>
                         </CardContent>
                       </Card>
@@ -299,11 +251,11 @@ Best regards,`;
                     <Button 
                       variant="outline"
                       size="sm"
-                      onClick={(e) => handleOrderInquiry(e, product)}
+                      onClick={(e) => handleAddToQuote(e, product)}
                       className="w-full flex items-center justify-center gap-2"
                     >
                       <ShoppingCart className="h-4 w-4" />
-                      Request Quote
+                      Add to Quote
                     </Button>
                   </CardContent>
                 </Card>
@@ -317,6 +269,31 @@ Best regards,`;
             <p className="text-gray-500">No products found matching your criteria.</p>
           </div>
         )}
+
+        {/* Order Information */}
+        <div className="mt-12 bg-blue-50 rounded-lg p-6">
+          <h3 className="text-lg mb-3 text-gray-900">Ordering Information</h3>
+          <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-600">
+            <div>
+              <h4 className="font-medium text-gray-900 mb-2">How to Order</h4>
+              <ul className="space-y-1">
+                <li>• Click on any product to view detailed specifications</li>
+                <li>• Use "Request Quote" button to send email inquiry</li>
+                <li>• Receive quotation and availability confirmation</li>
+                <li>• Complete order via direct bank transfer</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-medium text-gray-900 mb-2">Payment & Shipping</h4>
+              <ul className="space-y-1">
+                <li>• Payment via direct bank transfer</li>
+                <li>• Net 30 payment terms for established customers</li>
+                <li>• Worldwide shipping available</li>
+                <li>• Temperature-controlled shipping when required</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
