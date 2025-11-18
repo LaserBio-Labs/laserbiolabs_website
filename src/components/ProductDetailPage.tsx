@@ -1,12 +1,27 @@
-import { ArrowLeft, Mail, Download, CheckCircle, AlertCircle, ShoppingCart } from 'lucide-react';
-import { Button } from './ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Badge } from './ui/badge';
-import { Separator } from './ui/separator';
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import { useQuote } from './QuoteContext';
-import { toast } from 'sonner@2.0.3';
-import { productData, productCategoriesDescriptions } from '../data/productData';
+import {
+  ArrowLeft,
+  Mail,
+  Download,
+  CheckCircle,
+  AlertCircle,
+  ShoppingCart,
+} from "lucide-react";
+import { Button } from "./ui/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { Badge } from "./ui/badge";
+import { Separator } from "./ui/separator";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useQuote } from "./QuoteContext";
+import { toast } from "sonner@2.0.3";
+import {
+  productData,
+  productCategoriesDescriptions,
+} from "../data/productData";
 
 interface Product {
   id: string;
@@ -21,8 +36,8 @@ interface Product {
 
 // Transform the data structure
 const products: Product[] = [];
-productData.forEach(section => {
-  section.products.forEach(product => {
+productData.forEach((section) => {
+  section.products.forEach((product) => {
     products.push({
       id: product.title,
       name: product.subtitle,
@@ -31,7 +46,7 @@ productData.forEach(section => {
       description: product.text,
       sidetext: product.sidetext,
       graph: product.graph,
-      image: section.img
+      image: section.img,
     });
   });
 });
@@ -41,8 +56,11 @@ interface ProductDetailPageProps {
   onBack: () => void;
 }
 
-export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps) {
-  const product = products.find(p => p.id === productId);
+export function ProductDetailPage({
+  productId,
+  onBack,
+}: ProductDetailPageProps) {
+  const product = products.find((p) => p.id === productId);
   const { addItem } = useQuote();
 
   if (!product) {
@@ -50,7 +68,9 @@ export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps)
       <div className="min-h-screen bg-gray-50 py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-2xl mb-4 text-gray-900">Product Not Found</h1>
+            <h1 className="text-2xl mb-4 text-gray-900">
+              Product Not Found
+            </h1>
             <Button onClick={onBack}>
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Catalogue
@@ -66,33 +86,45 @@ export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps)
       id: product.id,
       name: product.name,
       category: product.category,
-      price: product.price
+      price: product.price,
     });
     toast.success(`Added ${product.name} to quote`);
   };
 
   const handleDownloadDatasheet = () => {
-    alert('Datasheet download would be initiated here. Please contact us for technical documentation.');
+    alert(
+      "Datasheet download would be initiated here. Please contact us for technical documentation.",
+    );
   };
 
   // Helper function to extract applications from description
   const getApplications = (description: string) => {
-    const applicationsMatch = description.match(/Applications:\s*([^<]*)/i);
+    const applicationsMatch = description.match(
+      /Applications:\s*([^<]*)/i,
+    );
     if (applicationsMatch) {
-      return applicationsMatch[1].split(',').map(app => app.trim()).filter(app => app.length > 0);
+      return applicationsMatch[1]
+        .split(",")
+        .map((app) => app.trim())
+        .filter((app) => app.length > 0);
     }
     return [];
   };
 
   const applications = getApplications(product.description);
-  const categoryDescription = productCategoriesDescriptions[product.category];
+  const categoryDescription =
+    productCategoriesDescriptions[product.category];
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
         <div className="mb-6">
-          <Button variant="ghost" onClick={onBack} className="flex items-center gap-2">
+          <Button
+            variant="ghost"
+            onClick={onBack}
+            className="flex items-center gap-2"
+          >
             <ArrowLeft className="h-4 w-4" />
             Back to Catalogue
           </Button>
@@ -108,7 +140,7 @@ export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps)
                 className="w-full h-full object-cover"
               />
             </div>
-            
+
             {/* Mass Spectrum Graph */}
             {product.graph && (
               <div className="aspect-video rounded-lg overflow-hidden bg-white shadow-sm">
@@ -117,7 +149,9 @@ export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps)
                   alt={`Mass spectrum for ${product.name}`}
                   className="w-full h-full object-cover"
                 />
-                <p className="text-sm text-gray-500 text-center mt-2">Representative mass spectrum</p>
+                <p className="text-sm text-gray-500 text-center mt-2">
+                  Representative mass spectrum
+                </p>
               </div>
             )}
           </div>
@@ -127,9 +161,13 @@ export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps)
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <Badge variant="secondary">{product.id}</Badge>
-                <Badge variant="outline">{product.category}</Badge>
+                <Badge variant="outline">
+                  {product.category}
+                </Badge>
               </div>
-              <h1 className="text-3xl mb-4 text-gray-900">{product.name}</h1>
+              <h1 className="text-3xl mb-4 text-gray-900">
+                {product.name}
+              </h1>
             </div>
 
             {/* Pricing and Actions */}
@@ -137,23 +175,31 @@ export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps)
               <CardContent className="pt-6">
                 <div className="flex justify-between items-center mb-4">
                   <div>
-                    <p className="text-sm text-gray-500 mb-1">Price</p>
-                    <p className="text-3xl font-medium text-primary">{product.price}</p>
+                    <p className="text-sm text-gray-500 mb-1">
+                      Price
+                    </p>
+                    <p className="text-3xl font-medium text-primary">
+                      {product.price}
+                    </p>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-green-600">
                     <CheckCircle className="h-4 w-4" />
                     <span>In Stock</span>
                   </div>
                 </div>
-                
+
                 <div className="space-y-3">
-                  <Button onClick={handleAddToQuote} className="w-full" size="lg">
+                  <Button
+                    onClick={handleAddToQuote}
+                    className="w-full"
+                    size="lg"
+                  >
                     <ShoppingCart className="h-4 w-4 mr-2" />
                     Add to Quote
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    onClick={handleDownloadDatasheet} 
+                  <Button
+                    variant="outline"
+                    onClick={handleDownloadDatasheet}
                     className="w-full"
                   >
                     <Download className="h-4 w-4 mr-2" />
@@ -169,10 +215,14 @@ export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps)
                 <div className="flex items-start gap-3">
                   <AlertCircle className="h-5 w-5 text-orange-500 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Storage & Handling</h4>
+                    <h4 className="font-medium text-gray-900 mb-1">
+                      Storage & Handling
+                    </h4>
                     <p className="text-sm text-gray-600">
-                      Store at recommended temperature. Handle with appropriate laboratory safety protocols.
-                      Detailed storage conditions provided with each shipment.
+                      Store at recommended temperature. Handle
+                      with appropriate laboratory safety
+                      protocols. Detailed storage conditions
+                      provided with each shipment.
                     </p>
                   </div>
                 </div>
@@ -193,7 +243,9 @@ export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps)
               {categoryDescription && (
                 <>
                   <div className="bg-blue-50 rounded-lg p-4 mb-6">
-                    <h4 className="font-medium text-gray-900 mb-2">About {product.category}</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">
+                      About {product.category}
+                    </h4>
                     <p className="text-gray-700 leading-relaxed">
                       {categoryDescription}
                     </p>
@@ -201,25 +253,36 @@ export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps)
                   <Separator className="my-6" />
                 </>
               )}
-              
+
               {/* Product-specific Description */}
-              <div 
+              <div
                 className="text-gray-700 leading-relaxed mb-6"
-                dangerouslySetInnerHTML={{ __html: product.description }}
+                dangerouslySetInnerHTML={{
+                  __html: product.description,
+                }}
               />
-              
+
               {applications.length > 0 && (
                 <>
                   <Separator className="my-6" />
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-3">Applications</h4>
+                    <h4 className="font-medium text-gray-900 mb-3">
+                      Applications
+                    </h4>
                     <div className="grid gap-2">
-                      {applications.map((application, index) => (
-                        <div key={index} className="flex items-start gap-3">
-                          <CheckCircle className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-700">{application}</span>
-                        </div>
-                      ))}
+                      {applications.map(
+                        (application, index) => (
+                          <div
+                            key={index}
+                            className="flex items-start gap-3"
+                          >
+                            <CheckCircle className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700">
+                              {application}
+                            </span>
+                          </div>
+                        ),
+                      )}
                     </div>
                   </div>
                 </>
@@ -234,21 +297,33 @@ export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps)
                 <CardTitle>Product Composition</CardTitle>
               </CardHeader>
               <CardContent>
-                <div 
+                <div
                   className="bg-gray-50 rounded-lg p-4 mb-6"
-                  dangerouslySetInnerHTML={{ __html: product.sidetext }}
+                  dangerouslySetInnerHTML={{
+                    __html: product.sidetext,
+                  }}
                 />
-                
+
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <h4 className="font-medium text-gray-900 mb-2">Quality Assurance</h4>
+                  <h4 className="font-medium text-gray-900 mb-2">
+                    Quality Assurance
+                  </h4>
                   <p className="text-sm text-gray-600 mb-3">
-                    All products are manufactured under ISO-certified conditions and undergo rigorous quality control testing.
+                    All products are manufactured under
+                    ISO-certified conditions and undergo
+                    rigorous quality control testing.
                   </p>
                   <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• HPLC analysis for purity verification</li>
+                    <li>
+                      • HPLC analysis for purity verification
+                    </li>
                     <li>• Mass spectrometry validation</li>
-                    <li>• Comprehensive certificate of analysis</li>
-                    <li>• Batch-to-batch consistency testing</li>
+                    <li>
+                      • Comprehensive certificate of analysis
+                    </li>
+                    <li>
+                      • Batch-to-batch consistency testing
+                    </li>
                   </ul>
                 </div>
               </CardContent>
@@ -258,13 +333,17 @@ export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps)
           {/* Technical Support Section */}
           <Card>
             <CardHeader>
-              <CardTitle>Technical Support & Documentation</CardTitle>
+              <CardTitle>
+                Technical Support & Documentation
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-base">Documentation</CardTitle>
+                    <CardTitle className="text-base">
+                      Documentation
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 text-sm mb-4">
@@ -273,34 +352,48 @@ export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps)
                       <li>• Preparation protocols</li>
                       <li>• MSDS/Safety information</li>
                     </ul>
-                    <Button variant="outline" size="sm" onClick={handleDownloadDatasheet}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={handleDownloadDatasheet}
+                    >
                       Download Documents
                     </Button>
                   </CardContent>
                 </Card>
-                
+
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-base">Expert Support</CardTitle>
+                    <CardTitle className="text-base">
+                      Expert Support
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-gray-600 mb-4">
-                      Get help from our mass spectrometry experts for method development and troubleshooting.
+                      Get help from our mass spectrometry
+                      experts for method development and
+                      troubleshooting.
                     </p>
                     <div className="space-y-2">
-                      <Button 
-                        variant="outline" 
-                        size="sm" 
+                      <Button
+                        variant="outline"
+                        size="sm"
                         className="w-full"
-                        onClick={() => window.location.href = 'mailto:support@laserbiolabs.com?subject=Technical Support Request'}
+                        onClick={() =>
+                          (window.location.href =
+                            "mailto:info@laserbiolabs.com?subject=Technical Support Request")
+                        }
                       >
                         Email Support
                       </Button>
-                      <Button 
-                        variant="outline" 
-                        size="sm" 
+                      <Button
+                        variant="outline"
+                        size="sm"
                         className="w-full"
-                        onClick={() => window.location.href = 'mailto:support@laserbiolabs.com?subject=Consultation Request'}
+                        onClick={() =>
+                          (window.location.href =
+                            "mailto:info@laserbiolabs.com?subject=Consultation Request")
+                        }
                       >
                         Schedule Consultation
                       </Button>
@@ -308,12 +401,17 @@ export function ProductDetailPage({ productId, onBack }: ProductDetailPageProps)
                   </CardContent>
                 </Card>
               </div>
-              
+
               <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="font-medium text-gray-900 mb-2">Quality Guarantee</h4>
+                <h4 className="font-medium text-gray-900 mb-2">
+                  Quality Guarantee
+                </h4>
                 <p className="text-sm text-gray-600">
-                  All products come with comprehensive certificates of analysis and are backed by our quality guarantee. 
-                  If you experience any issues with product performance, please contact us immediately for resolution.
+                  All products come with comprehensive
+                  certificates of analysis and are backed by our
+                  quality guarantee. If you experience any
+                  issues with product performance, please
+                  contact us immediately for resolution.
                 </p>
               </div>
             </CardContent>

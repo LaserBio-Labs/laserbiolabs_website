@@ -1,352 +1,443 @@
 const productData = [
   {
-    "section": "Matrix kits",
-    "anchor": "matrix-kits",
-    "text": "MALDI matrix kits contain pre-weighed tubes of recrystallized matrices and adatped solvent mixtures. They provide standard analytical conditions and eliminate the need for cumbersome daily preparation of fresh matrix. Recrystallized and caption-depleted matrix provides higher sensitivity and sensitivity and improved signal-to-noise ration when compared to non-recrystallized standard product.",
-    "img": "/images/products--matrix-kits.webp",
-    "products": [
+    section: "Matrix kits",
+    anchor: "matrix-kits",
+    text: "MALDI matrix kits contain pre-weighed tubes of recrystallized matrices and adatped solvent mixtures. They provide standard analytical conditions and eliminate the need for cumbersome daily preparation of fresh matrix. Recrystallized and caption-depleted matrix provides higher sensitivity and sensitivity and improved signal-to-noise ration when compared to non-recrystallized standard product.",
+    img: "/images/products--matrix-kits.webp",
+    products: [
       {
-        "title": "M001",
-        "price": "125 €",
-        "subtitle": "αCHCA matrix kit",
-        "text": "50 eppendorf tubes of recrystallized α-cyano-4-hydroxycinnamic acid (αCHCA) matrix (5 mg each) and one 50 mL solvent vial (50% acetonitrile in water /  0.1% Trifluoroacetic acid) for matrix preparation. <br> <br> <br>Applications:  MALDI-TOF analysis of peptides and proteins, Proteomics"
+        title: "M001",
+        price: "135 €",
+        subtitle: "αCHCA matrix kit",
+        text: "50 eppendorf tubes of recrystallized α-cyano-4-hydroxycinnamic acid (αCHCA) matrix (5 mg each) and one 50 mL solvent vial (50% acetonitrile in water /  0.1% Trifluoroacetic acid) for matrix preparation. <br> <br> <br>Applications:  MALDI-TOF analysis of peptides and proteins, Proteomics",
       },
       {
-        "title": "M002",
-        "price": "125 €",
-        "subtitle": "SA matrix kit",
-        "text": "50 eppendorf tubes of recyrstallized Sinapinic acid matrix (3,5 dimethoxy-4-hydroxycinnamic acid / SA - 5 mg each), and one 50 mL solvent vial (30% acetonitrile in water / 0.1% trifluoroacetic acid) for matrix preparation.<br><br>Applications: MALDI-TOF analysis of peptides and proteins"
+        title: "M002",
+        price: "135 €",
+        subtitle: "SA matrix kit",
+        text: "50 eppendorf tubes of recyrstallized Sinapinic acid matrix (3,5 dimethoxy-4-hydroxycinnamic acid / SA - 5 mg each), and one 50 mL solvent vial (30% acetonitrile in water / 0.1% trifluoroacetic acid) for matrix preparation.<br><br>Applications: MALDI-TOF analysis of peptides and proteins",
       },
       {
-        "title": "M003",
-        "price": "125 €",
-        "subtitle": "DHB matrix kit",
-        "text": "50 eppendorf tubes of recrystalllized 2,5 dihydroxybenzoic acid matrix (Gentisic acid -  DHB - 5 mg each), and one 50 mL solvent vial (20% acetonitrile in water / 0.1% trifluoroacetic acid) for matrix preparation.<br><br>Applications: MALDI-TOF analysis of peptides and proteins, small molecules"
+        title: "M003",
+        price: "135 €",
+        subtitle: "DHB matrix kit",
+        text: "50 eppendorf tubes of recrystalllized 2,5 dihydroxybenzoic acid matrix (Gentisic acid -  DHB - 5 mg each), and one 50 mL solvent vial (20% acetonitrile in water / 0.1% trifluoroacetic acid) for matrix preparation.<br><br>Applications: MALDI-TOF analysis of peptides and proteins, small molecules",
       },
       {
-        "title": "M004",
-        "price": "215 €",
-        "subtitle": "Peptide/protein 3-matrix kit",
-        "text": "- 30 eppendorf tubes of recrystallized α-cyano-4-hydroxycinnamic acid matrix (αCHCA,  5 mg each)<br>- 30 eppendorf tubes of recrystallized Sinapinic acid (3,5 dimethoxy-4-hydroxycinnamic acid matrix / SA - 5 mg each)<br>- 30 eppendorf tubes of recrystallized 2,5 dihydroxybenzoic acid matrix (Gentisic acid / DHB - 5 mg each)<br>- Three solvent vials of 30 mL each (50% acetonitrile in water / 0.1% TFA, 30% acetonitrile in water / 0.1% TFA, 20% acetonitrile in water / 0.1% TFA) for matrix preparation<br><br><br>Applications: MALD-TOF analysis of peptides and proteins, proteomics, small molecules"
+        title: "M004",
+        price: "235 €",
+        subtitle: "Peptide/protein 3-matrix kit",
+        text: "- 30 eppendorf tubes of recrystallized α-cyano-4-hydroxycinnamic acid matrix (αCHCA,  5 mg each)<br>- 30 eppendorf tubes of recrystallized Sinapinic acid (3,5 dimethoxy-4-hydroxycinnamic acid matrix / SA - 5 mg each)<br>- 30 eppendorf tubes of recrystallized 2,5 dihydroxybenzoic acid matrix (Gentisic acid / DHB - 5 mg each)<br>- Three solvent vials of 30 mL each (50% acetonitrile in water / 0.1% TFA, 30% acetonitrile in water / 0.1% TFA, 20% acetonitrile in water / 0.1% TFA) for matrix preparation<br><br><br>Applications: MALD-TOF analysis of peptides and proteins, proteomics, small molecules",
       },
       {
-        "title": "M005",
-        "price": "125 €",
-        "subtitle": "sDHB (super DHB) matrix kit",
-        "text": "50 eppendorf tubes of recrystallized super DHB matrix (2,5 dihydroxybenzoic acid + 5-methoxysalicylic acid - 5 mg each) and one 50mL solvent vial (20% acetonitrile in water / 0.1% trifluoroacetic) for matrix preparation.<br><br>Applications: MALDI-TOF analysis of peptides and proteins"
+        title: "M005",
+        price: "135 €",
+        subtitle: "sDHB (super DHB) matrix kit",
+        text: "50 eppendorf tubes of recrystallized super DHB matrix (2,5 dihydroxybenzoic acid + 5-methoxysalicylic acid - 5 mg each) and one 50mL solvent vial (20% acetonitrile in water / 0.1% trifluoroacetic) for matrix preparation.<br><br>Applications: MALDI-TOF analysis of peptides and proteins",
       },
       {
-        "title": "M006",
-        "price": "135 €",
-        "subtitle": "CA matrix kit",
-        "text": "50 eppendorf tubes of recrystallized Caffeic acid matrix (3,4 dihydroxycinnamic acid / CA - 5 mg each) and one 50 mL solvent vial (50% acetonitrile in water / 0.1% trifluoroacetic acid) for matrix preparation.<br><br>Applications: MALDI-TOF analysis of peptides and proteins"
+        title: "M006",
+        price: "145 €",
+        subtitle: "CA matrix kit",
+        text: "50 eppendorf tubes of recrystallized Caffeic acid matrix (3,4 dihydroxycinnamic acid / CA - 5 mg each) and one 50 mL solvent vial (50% acetonitrile in water / 0.1% trifluoroacetic acid) for matrix preparation.<br><br>Applications: MALDI-TOF analysis of peptides and proteins",
       },
       {
-        "title": "M007",
-        "price": "125 €",
-        "subtitle": "FA matrix kit",
-        "text": "50 eppendorf tubes of recrystallized Ferulic acid matrix (trans-4-hyrodxy-3-methoxycinnamic acid / FA - 5 mg each) and one 50 mL solvent vial (30% acetonitrile in water / 0.1% trifluoroacetic acid) for matrix preparation<br><br>Applications: MALDI-TOF analysis of peptides and proteins"
+        title: "M007",
+        price: "135 €",
+        subtitle: "FA matrix kit",
+        text: "50 eppendorf tubes of recrystallized Ferulic acid matrix (trans-4-hyrodxy-3-methoxycinnamic acid / FA - 5 mg each) and one 50 mL solvent vial (30% acetonitrile in water / 0.1% trifluoroacetic acid) for matrix preparation<br><br>Applications: MALDI-TOF analysis of peptides and proteins",
       },
       {
-        "title": "M008",
-        "price": "360 €",
-        "subtitle": "Peptide/protein 5-matrix kit",
-        "text": "- 30 eppendorf tubes of recrystallized α-cyano-4-hydroxycinnamic acid matrix (CHCA - 5 mg each) <br>- 30 eppendorf tubes of recrystallized Sinapinic acid (3,5 diemthoxy-4-hydroxycinnamic acid matrix / SA - 5 mg each)<br>- 30 eppendorf tubes of recrystallized 2,5 dihydroxybenzoic acid matrix (Gentistic acid / DHB - 5mg each)<br>- 30 eppendorf tubes of recrystallized Ferulic acid matrix (trans-4-hydroxy-3-methoxycinnamic acid / FA - 5 mg each)<br>- Three solvent vials (50% acetonitrile in water / 0.1% TFA, 30% acetonitrile in water / 0.1% TFA, 20% acetonitrile in water / 0.1% TFA) for matrix preparation<br><br><br>Applications: MALDI-TOF analysis of peptides and proteins, proteomics, small molecules"
+        title: "M008",
+        price: "390 €",
+        subtitle: "Peptide/protein 5-matrix kit",
+        text: "- 30 eppendorf tubes of recrystallized α-cyano-4-hydroxycinnamic acid matrix (CHCA - 5 mg each) <br>- 30 eppendorf tubes of recrystallized Sinapinic acid (3,5 diemthoxy-4-hydroxycinnamic acid matrix / SA - 5 mg each)<br>- 30 eppendorf tubes of recrystallized 2,5 dihydroxybenzoic acid matrix (Gentistic acid / DHB - 5mg each)<br>- 30 eppendorf tubes of recrystallized Ferulic acid matrix (trans-4-hydroxy-3-methoxycinnamic acid / FA - 5 mg each)<br>- Three solvent vials (50% acetonitrile in water / 0.1% TFA, 30% acetonitrile in water / 0.1% TFA, 20% acetonitrile in water / 0.1% TFA) for matrix preparation<br><br><br>Applications: MALDI-TOF analysis of peptides and proteins, proteomics, small molecules",
       },
       {
-        "title": "M009",
-        "price": "125 €",
-        "subtitle": "HPA matrix kit",
-        "text": "50 eppendorf tubes of recrystallized 3-hydroxypicolinic acid matrix (HPA - 25 mg each), and one 50 mL solvent vial (25mM diammonium citrate in 50% acetonitrile / water / 0.1% TFA) for matrix preparation<br><br>Applications: MALDI-TOF analysis of oligonucleotides"
+        title: "M009",
+        price: "135 €",
+        subtitle: "HPA matrix kit",
+        text: "50 eppendorf tubes of recrystallized 3-hydroxypicolinic acid matrix (HPA - 25 mg each), and one 50 mL solvent vial (25mM diammonium citrate in 50% acetonitrile / water / 0.1% TFA) for matrix preparation<br><br>Applications: MALDI-TOF analysis of oligonucleotides",
       },
       {
-        "title": "M010",
-        "price": "125 €",
-        "subtitle": "246THAP matrix kit",
-        "text": "50 eppendorf tubes of recrystallized 2,4,6 trihydroxyacetophenone matrix (246THAP - 10 mg each), and one 50 mL solvent vial (25mM diammonium citrate in 50% acetonitrile / water / 0.1% TFA) for matrix preparation<br><br>Applications: MALDI-TOF analysis of oligonucleotides"
+        title: "M010",
+        price: "135 €",
+        subtitle: "246THAP matrix kit",
+        text: "50 eppendorf tubes of recrystallized 2,4,6 trihydroxyacetophenone matrix (246THAP - 10 mg each), and one 50 mL solvent vial (25mM diammonium citrate in 50% acetonitrile / water / 0.1% TFA) for matrix preparation<br><br>Applications: MALDI-TOF analysis of oligonucleotides",
       },
       {
-        "title": "M012",
-        "price": "185 €",
-        "subtitle": "Ouligonucleotide matrix kit",
-        "text": "- 30 eppendorf tubes of recrystallized 3-hydroxypicolinic acid matrix (HPA - 25 mg each)<br>- 30 eppendorf tubes of recrystallized 2,4,6 trihydroxyacetophenone matrix (246THAP - 10 mg each)<br>- One 60 mL solvent vial (25mM diammonium citrate in 50% acetonitrile / water / 0.1% TFA) for matrix preparation<br><br>Applications: MALDI-TOF analysis of oligonucleotides"
-      }
-    ]
+        title: "M012",
+        price: "200 €",
+        subtitle: "Oligonucleotides matrix kit",
+        text: "- 30 eppendorf tubes of recrystallized 3-hydroxypicolinic acid matrix (HPA - 25 mg each)<br>- 30 eppendorf tubes of recrystallized 2,4,6 trihydroxyacetophenone matrix (246THAP - 10 mg each)<br>- One 60 mL solvent vial (25mM diammonium citrate in 50% acetonitrile / water / 0.1% TFA) for matrix preparation<br><br>Applications: MALDI-TOF analysis of oligonucleotides",
+      },
+    ],
   },
   {
-    "section": "Bulk Matrix",
-    "anchor": "bulk-matrix",
-    "text": "",
-    "img": "/images/products--bulk-matrix.webp",
-    "products": [
+    section: "Bulk Matrix",
+    anchor: "bulk-matrix",
+    text: "",
+    img: "/images/products--bulk-matrix.webp",
+    products: [
       {
-        "title": "M012",
-        "price": "185 €",
-        "subtitle": "Ouligonucleotide matrix kit",
-        "text": "- 30 eppendorf tubes of recrystallized 3-hydroxypicolinic acid matrix (HPA - 25 mg each)<br>- 30 eppendorf tubes of recrystallized 2,4,6 trihydroxyacetophenone matrix (246THAP - 10 mg each)<br>- One 60 mL solvent vial (25mM diammonium citrate in 50% acetonitrile / water / 0.1% TFA) for matrix preparation<br><br>Applications: MALDI-TOF analysis of oligonucleotides"
+        title: "M101",
+        subtitle: "Recrystallized αCHCA matrix",
+        price: "175 €",
+        text: "5 tubes of 200 mg each recrystallized α-cyano-4-hydroxycinnamic acid matrix (αCHCA)",
       },
       {
-        "title": "M101",
-        "subtitle": "Recrystallized αCHCA matrix",
-        "price": "160 €",
-        "text": "5 tubes of 200 mg each recrystallized α-cyano-4-hydroxycinnamic acid matrix (αCHCA)"
+        title: "M102",
+        subtitle: "Recrystallized SA matrix",
+        price: "200 €",
+        text: "5 tubes of 200 mg each recrystallized Sinnapinic acid matrix (3,5 dimethoxy-4-hydroxycinnamic acid / SA)",
       },
       {
-        "title": "M102",
-        "subtitle": "Recrystallized SA matrix",
-        "price": "185 €",
-        "text": "5 tubes of 200 mg each recrystallized Sinnapinic acid matrix (3,5 dimethoxy-4-hydroxycinnamic acid / SA)"
+        title: "M103",
+        subtitle: "Recrystallized DHB matrix",
+        price: "165 €",
+        text: "5 tubes of 200 each recrystallized 2,5 dihydroxybenzoic acid matrix (Gentisic acid / DHB) ",
       },
       {
-        "title": "M103",
-        "subtitle": "Recrysallized DHB matrix",
-        "price": "150 €",
-        "text": "5 tubes of 200 each recrystallized 2,5 dihydroxybenzoic acid matrix (Gentisic acid / DHB) "
+        title: "M104",
+        subtitle: "Recrystallized Peptide/protein 3-matrix kit",
+        price: "165 €",
+        text: "3 tubes of 200 mg each of recrystallized matrix:<br>- α-cyano-4-hyroxycinnamic acid (αCHCA)<br>- Sinapinic acid (3,5 dimethoxy-4-hydroxycinnamic acid - SA)<br>- 2,5 dihydroxybenzoic acid ( Gentisic acid - DHB)",
       },
       {
-        "title": "M104",
-        "subtitle": "Recrystallized Peptide/protein 3-matrix kit",
-        "price": "150 €",
-        "text": "3 tubes of 200 mg each of recrystallized matrix:<br>- α-cyano-4-hyroxycinnamic acid (αCHCA)<br>- Sinapinic acid (3,5 dimethoxy-4-hydroxycinnamic acid - SA)<br>- 2,5 dihydroxybenzoic acid ( Gentisic acid - DHB)"
+        title: "M105",
+        subtitle: "Recrystallized sDHB matrix",
+        price: "175 €",
+        text: "5 tubes of 200 mg each recrystallized super DHB matrix (2,5 dihydroxybenzoic acid + 5-methoxysalicylic acid)",
       },
       {
-        "title": "M105",
-        "subtitle": "Recrystallized sDHB matrix",
-        "price": "160 €",
-        "text": "5 tubes of 200 mg each recrystallized super DHB matrix (2,5 dihydroxybenzoic acid + 5-methoxysalicylic acid)"
+        title: "M106",
+        subtitle: "Recrystallized CA matrix",
+        price: "185 €",
+        text: "5 tubes of 200 mg each recrystallized Caffeic acid matrix (3,4 dihydroxycinnamic acid / CA)",
       },
       {
-        "title": "M106",
-        "subtitle": "Recrystallized CA matrix",
-        "price": "185 €",
-        "text": "5 tubes of 200 mg each recrystallized Caffeic acid matrix (3,4 dihydroxycinnamic acid / CA)"
+        title: "M107",
+        subtitle: "Recrystallized FA matrix",
+        price: "165 €",
+        text: "5 tubes of 200 mg each recrystallized Ferulic acid matrix (trans-4-hydroxy-3-methoxycinnamic acid / FA)",
       },
       {
-        "title": "M107",
-        "subtitle": "Recrystallized FA matrix",
-        "price": "150 €",
-        "text": "5 tubes of 200 mg each recrystallized Ferulic acid matrix (trans-4-hydroxy-3-methoxycinnamic acid / FA)"
+        title: "M108",
+        subtitle: "Recrystallized Peptide/protein 5-matrix kit",
+        price: "200 €",
+        text: "5 tubes of 200 mg each of recrystallized matrix:<br>- α-cyano-4-hydroxycinnamic acid (αCHCA)<br>- Sinapinic acid (3,5 dimethoxy-4-hydroxycinnamic acid - SA)<br>- 2,5 dihydroxybenzoic acid (Gentistic acid - DHB)<br>- Caffeic acid matrix (3,4 dihydroxycinnamic acid / CA)<br>- Ferulic acid matrix (trans-4-hydroxy-3-methoxycinnamic acid / FA)",
       },
       {
-        "title": "M108",
-        "subtitle": "Recrystallized Peptide/protein 5-matrix kit",
-        "price": "185 €",
-        "text": "5 tubes of 200 mg each of recrystallized matrix:<br>- α-cyano-4-hydroxycinnamic acid (αCHCA)<br>- Sinapinic acid (3,5 dimethoxy-4-hydroxycinnamic acid - SA)<br>- 2,5 dihydroxybenzoic acid (Gentistic acid - DHB)<br>- Caffeic acid matrix (3,4 dihydroxycinnamic acid / CA)<br>- Ferulic acid matrix (trans-4-hydroxy-3-methoxycinnamic acid / FA)"
+        title: "M109",
+        subtitle: "Recrystallized HPA matrix",
+        price: "175 €",
+        text: "5 tubes of 200 each recrystallized 3-hydroxypicolinic acid (HPA)",
       },
       {
-        "title": "M109",
-        "subtitle": "Recrystallized HPA matrix",
-        "price": "160 €",
-        "text": "5 tubes of 200 each recrystallized 3-hydroxypicolinic acid (HPA)"
+        title: "M110",
+        subtitle: "Recrystallized 246THAP matrix",
+        price: "200 €",
+        text: "5 tubes of 200 mg each recrystallized 2,4,6 trihydroxyacetophenone matrix (246THAP)",
       },
       {
-        "title": "M110",
-        "subtitle": "Recrystallized 246THAP matrix",
-        "price": "185 €",
-        "text": "5 tubes of 200 mg each recrystallized 2,4,6 trihydroxyacetophenone matrix (246THAP)"
+        title: "M112",
+        subtitle: "Recrystallized oligonucleotide 3-matrix kit",
+        price: "165 €",
+        text: "3 tubes of 200 mg each recrystallized matrix <br>- 3-hydroxypicolinic acid matrix (HPA)<br>- Picolinic acid matrix (PA)<br>- 2,4,6 trihydroxyacetophenone matrix (246THAP)",
       },
-      {
-        "title": "M112",
-        "subtitle": "Recrystallized oligonucleotide 3-matrix kit",
-        "price": "150 €",
-        "text": "3 tubes of 200 mg each recrystallized matrix <br>- 3-hydroxypicolinic acid matrix (HPA)<br>- Picolinic acid matrix (PA)<br>- 2,4,6 trihydroxyacetophenone matrix (246THAP)"
-      }
-    ]
+    ],
   },
   {
-    "section": "Peptide calibration mixtures",
-    "anchor": "peptide-calibration-mixtures",
-    "text": "",
-    "img": "/images/products--peptide-calibration-mixtures.webp",
-    "products": [
+    section: "Peptide calibration mixtures",
+    anchor: "peptide-calibration-mixtures",
+    text: "",
+    img: "/images/products--peptide-calibration-mixtures.webp",
+    products: [
       {
-        "title": "C101",
-        "subtitle": "Peptide calibration mix 1 (PepMix1) 1000-2500 Da",
-        "price": "185 €",
-        "text": "5 tubes of peptide calibration mixture 1. Each tube provides 1000 calibration points<br>",
-        "sidetext": "<b>Contains:</b><br><div><table>  <tr>  <td> Angiotensi II</td>   <td>(1046.2 Da)</td></tr>  <tr>  <td>Angiotensi I</td>     <td>(1296.5 Da)</td></tr>  <tr>  <td>Neurotensin</td>      <td>(1672.9 Da)</td></tr>  <tr>  <td>ACTH[1-17]</td>       <td>(2093.5 Da)</td></tr>  <tr>  <td>ACTH[18-39]</td>      <td>(2465.7 Da)</td></tr></table></div>",
-        "graph": "/images/products--peptide-calibration-mixtures.webp",
+        title: "C101",
+        subtitle:
+          "Peptide calibration mix 1 (PepMix1) 1000-2500 Da",
+        price: "200 €",
+        text: "5 tubes of peptide calibration mixture 1. Each tube provides 1000 calibration points<br>",
+        sidetext:
+          "<b>Contains:</b><br><div><table>  <tr>  <td> Angiotensi II</td>   <td>(1046.2 Da)</td></tr>  <tr>  <td>Angiotensi I</td>     <td>(1296.5 Da)</td></tr>  <tr>  <td>Neurotensin</td>      <td>(1672.9 Da)</td></tr>  <tr>  <td>ACTH[1-17]</td>       <td>(2093.5 Da)</td></tr>  <tr>  <td>ACTH[18-39]</td>      <td>(2465.7 Da)</td></tr></table></div>",
+        graph:
+          "/images/products--peptide-calibration-mixtures.webp",
       },
       {
-        "title": "C102",
-        "subtitle": "Peptide calibration mix 2 (PepMix2) 1500-6000 Da",
-        "price": "185 €",
-        "text": "5 tubes of peptide calibration mixture 2. Each tube provides 1000 calibration points",
-        "sidetext": "<b>Contains:</b><br><div><table><tr><td>Neurotensin            </td>   <td>(1672.9 Da)</td></tr><tr><td>ACTH[18-39]            </td>   <td>(2465.7 Da)</td></tr><tr><td>Bovine Insulin chain B </td>   <td>(3495.9 Da)</td></tr><tr><td>Bovine insulinn        </td>   <td>(5733.6 Da)</td></tr></table></div>",
-        "graph": "/images/products--peptide-calibration-mixtures.webp",
+        title: "C102",
+        subtitle:
+          "Peptide calibration mix 2 (PepMix2) 1500-6000 Da",
+        price: "200 €",
+        text: "5 tubes of peptide calibration mixture 2. Each tube provides 1000 calibration points",
+        sidetext:
+          "<b>Contains:</b><br><div><table><tr><td>Neurotensin            </td>   <td>(1672.9 Da)</td></tr><tr><td>ACTH[18-39]            </td>   <td>(2465.7 Da)</td></tr><tr><td>Bovine Insulin chain B </td>   <td>(3495.9 Da)</td></tr><tr><td>Bovine insulinn        </td>   <td>(5733.6 Da)</td></tr></table></div>",
+        graph:
+          "/images/products--peptide-calibration-mixtures.webp",
       },
       {
-        "title": "C103",
-        "subtitle": "Peptide calibration mix 3 (PepMix3) 3000-9000 Da",
-        "price": "185 €",
-        "text": "5 tubes of peptide calibration mixture 3. Each tube provides 1000 calibration points<br>",
-        "sidetext": "<b>Contains:</b><br><div><table><tr><td>Bovine Insulin chain B </td>     <td>(3495.9 Da)</td></tr><tr><td>Bovine Insuline        </td>     <td>(5733.6 Da)</td></tr><tr><td>Aprotinin              </td>     <td>(6511.5 Da)</td></tr><tr><td>Ubliquitin bovine      </td>     <td>(8564.8 Da)</td></tr></table></div>",
-        "graph": "/images/products--peptide-calibration-mixtures.webp",
+        title: "C103",
+        subtitle:
+          "Peptide calibration mix 3 (PepMix3) 3000-9000 Da",
+        price: "200 €",
+        text: "5 tubes of peptide calibration mixture 3. Each tube provides 1000 calibration points<br>",
+        sidetext:
+          "<b>Contains:</b><br><div><table><tr><td>Bovine Insulin chain B </td>     <td>(3495.9 Da)</td></tr><tr><td>Bovine Insuline        </td>     <td>(5733.6 Da)</td></tr><tr><td>Aprotinin              </td>     <td>(6511.5 Da)</td></tr><tr><td>Ubliquitin bovine      </td>     <td>(8564.8 Da)</td></tr></table></div>",
+        graph:
+          "/images/products--peptide-calibration-mixtures.webp",
       },
       {
-        "title": "C104",
-        "subtitle": "Peptide calibration mix 4 (ProteoMix) 500-3500 Da",
-        "price": "185 €",
-        "text": "5 tubes of peptide calibration mixture 4. Each tube provides 1000 calibration points. Specially developed for calibration of proteolytic peptide mixtures and proteomics applications<br>",
-        "sidetext": "<b>Contains:</b><br><div><table><tr><td>Bradykinin[1-5]        </td><td>  (572.7 Da)</td></tr><tr><td>Angiotensin II         </td><td> (1046.2 Da)</td></tr><tr><td>Neurotensin            </td><td> (1672.9 Da)</td></tr><tr><td>ACTH[18-39]            </td><td> (2465.7 Da)</td></tr><tr><td>Bovine Insulin chain B </td><td> (3495.9 Da)</td></tr></table></div>",
-        "graph": "/images/products--peptide-calibration-mixtures.webp",
+        title: "C104",
+        subtitle:
+          "Peptide calibration mix 4 (ProteoMix) 500-3500 Da",
+        price: "200 €",
+        text: "5 tubes of peptide calibration mixture 4. Each tube provides 1000 calibration points. Specially developed for calibration of proteolytic peptide mixtures and proteomics applications<br>",
+        sidetext:
+          "<b>Contains:</b><br><div><table><tr><td>Bradykinin[1-5]        </td><td>  (572.7 Da)</td></tr><tr><td>Angiotensin II         </td><td> (1046.2 Da)</td></tr><tr><td>Neurotensin            </td><td> (1672.9 Da)</td></tr><tr><td>ACTH[18-39]            </td><td> (2465.7 Da)</td></tr><tr><td>Bovine Insulin chain B </td><td> (3495.9 Da)</td></tr></table></div>",
+        graph:
+          "/images/products--peptide-calibration-mixtures.webp",
       },
       {
-        "title": "C105",
-        "subtitle": "Peptide calibration mix 5 (PepMix5) 500-2000 Da",
-        "price": "185 €",
-        "text": "5 tubes of peptide calibration mixture 5. Each tube provides 1000 calibration points<br>",
-        "sidetext": "<b>Contains:</b><br><div><table><tr><td>Bradykinin[1-5] </td><td>     (572.7 Da)</td></tr><tr><td>Bradykinin[1-7] </td><td>     (756.9 Da)</td></tr><tr><td>Bradykinin      </td><td>    (1060.2 Da)</td></tr><tr><td>Angiotensin I   </td><td>    (1296.5 Da)</td></tr><tr><td>Neurotensin     </td><td>    (1672.9 Da)</td></tr></table></div>",
-        "graph": "/images/products--peptide-calibration-mixtures.webp",
+        title: "C105",
+        subtitle:
+          "Peptide calibration mix 5 (PepMix5) 500-2000 Da",
+        price: "200 €",
+        text: "5 tubes of peptide calibration mixture 5. Each tube provides 1000 calibration points<br>",
+        sidetext:
+          "<b>Contains:</b><br><div><table><tr><td>Bradykinin[1-5] </td><td>     (572.7 Da)</td></tr><tr><td>Bradykinin[1-7] </td><td>     (756.9 Da)</td></tr><tr><td>Bradykinin      </td><td>    (1060.2 Da)</td></tr><tr><td>Angiotensin I   </td><td>    (1296.5 Da)</td></tr><tr><td>Neurotensin     </td><td>    (1672.9 Da)</td></tr></table></div>",
+        graph:
+          "/images/products--peptide-calibration-mixtures.webp",
       },
       {
-        "title": "C106",
-        "subtitle": "Peptide calibration mix 6 (PepMix6) 350-1000 Da",
-        "price": "185 €",
-        "text": "5 tubes of peptide calibration mixture 6. Each tube provides 1000 calibration points<br>",
-        "sidetext": "<b>Contains:</b><br><div><table><tr><td>Bradykinin[1-5]</td><td>   (572.7 Da)</td></tr><tr><td>Bradykinin[1-7]</td><td>   (756.0 Da)</td></tr><tr><td>Bradykinin[1-8]</td><td>   (904.0 Da)</td></tr></table></div>",
-        "graph": "/images/products--peptide-calibration-mixtures.webp",
-      }
-    ]
+        title: "C106",
+        subtitle:
+          "Peptide calibration mix 6 (PepMix6) 350-1000 Da",
+        price: "200 €",
+        text: "5 tubes of peptide calibration mixture 6. Each tube provides 1000 calibration points<br>",
+        sidetext:
+          "<b>Contains:</b><br><div><table><tr><td>Bradykinin[1-5]</td><td>   (572.7 Da)</td></tr><tr><td>Bradykinin[1-7]</td><td>   (756.0 Da)</td></tr><tr><td>Bradykinin[1-8]</td><td>   (904.0 Da)</td></tr></table></div>",
+        graph:
+          "/images/products--peptide-calibration-mixtures.webp",
+      },
+    ],
   },
   {
-    "section": "Protein calibration mixtures",
-    "anchor": "protein-calibration-mixtures",
-    "text": "",
-    "img": "/images/products--protein-calibration-mixtures.webp",
-    "products": [
+    section: "Protein calibration mixtures",
+    anchor: "protein-calibration-mixtures",
+    text: "",
+    img: "/images/products--protein-calibration-mixtures.webp",
+    products: [
       {
-        "title": "C107",
-        "subtitle": "Protein calibration mix 1 (ProMix1) 5,700-17,0000 Da",
-        "price": "185 €",
-        "text": "5 tubes of protein calibration mixture 1. Each tube provides 1000 calibration points<br>",
-        "sidetext": "<b>Contains:</b><br><div><table><tr><td>Bovine Insulin             </td><td>    (5733.6 Da)</td></tr><tr><td>Horse heart cytochrome C   </td><td>   (12360.1 Da)</td></tr><tr><td>Horse myoglobin            </td><td>   (16951.5 Da)</td></tr></table></div>",
-        "graph": "/images/products--protein-calibration-mixtures.webp",
+        title: "C107",
+        subtitle:
+          "Protein calibration mix 1 (ProMix1) 5,700-17,0000 Da",
+        price: "200 €",
+        text: "5 tubes of protein calibration mixture 1. Each tube provides 1000 calibration points<br>",
+        sidetext:
+          "<b>Contains:</b><br><div><table><tr><td>Bovine Insulin             </td><td>    (5733.6 Da)</td></tr><tr><td>Horse heart cytochrome C   </td><td>   (12360.1 Da)</td></tr><tr><td>Horse myoglobin            </td><td>   (16951.5 Da)</td></tr></table></div>",
+        graph:
+          "/images/products--protein-calibration-mixtures.webp",
       },
       {
-        "title": "C108",
-        "subtitle": "Protein calibration mix 2 (ProMix2) 8,000-24,000 Da",
-        "price": "185 €",
-        "text": "5 tubes of protein calibration mixture 2. Each tube provides 1000 calibration points<br>",
-        "sidetext": "<b>Contains:</b><br><div><table><tr><td>Horse heart cytochrome C </td><td>  (12360.1 Da)</td></tr>  <tr><td>Horse myoglobin          </td><td>  (16951.5 Da)</td></tr><tr><td>Trypsinogen              </td><td>  (23980.9 Da)</td></tr></table></div>",
-        "graph": "/images/products--protein-calibration-mixtures.webp",
+        title: "C108",
+        subtitle:
+          "Protein calibration mix 2 (ProMix2) 8,000-24,000 Da",
+        price: "200 €",
+        text: "5 tubes of protein calibration mixture 2. Each tube provides 1000 calibration points<br>",
+        sidetext:
+          "<b>Contains:</b><br><div><table><tr><td>Horse heart cytochrome C </td><td>  (12360.1 Da)</td></tr>  <tr><td>Horse myoglobin          </td><td>  (16951.5 Da)</td></tr><tr><td>Trypsinogen              </td><td>  (23980.9 Da)</td></tr></table></div>",
+        graph:
+          "/images/products--protein-calibration-mixtures.webp",
       },
       {
-        "title": "C109",
-        "subtitle": "Protein calibration mix 3 (ProMix3) 23,000-66,000 Da",
-        "price": "185 €",
-        "text": "5 tubes of protein calibration mixture 3. Each tube provides 1000 calibration points<br>",
-        "sidetext": "<b>Contains:</b><br><div><table><tr><td>Trypsinogen          </td><td> (23980.9 Da)</td></tr><tr><td>Yeast enolase        </td><td> (46670.9 Da)</td></tr><tr><td>Bovine serum albumin </td><td> (66429.9 Da)</td></tr></table></div>",
-        "graph": "/images/products--protein-calibration-mixtures.webp",
+        title: "C109",
+        subtitle:
+          "Protein calibration mix 3 (ProMix3) 23,000-66,000 Da",
+        price: "200 €",
+        text: "5 tubes of protein calibration mixture 3. Each tube provides 1000 calibration points<br>",
+        sidetext:
+          "<b>Contains:</b><br><div><table><tr><td>Trypsinogen          </td><td> (23980.9 Da)</td></tr><tr><td>Yeast enolase        </td><td> (46670.9 Da)</td></tr><tr><td>Bovine serum albumin </td><td> (66429.9 Da)</td></tr></table></div>",
+        graph:
+          "/images/products--protein-calibration-mixtures.webp",
       },
       {
-        "title": "C110",
-        "subtitle": "Protein calibration standards 12,000-66,000 Da",
-        "price": "185 €",
-        "text": "5 tubes of individual protein calibrants. Each tube provides 1000 calibration points<br>",
-        "sidetext": "<b>Contains:</b><br><table><tr><td>Horse heart cytochrome C  </td><td>    (12360.1 Da)</td></tr><tr><td>Horse myoglobin           </td><td>    (16951.5 Da)</td></tr><tr><td>Trypsinogen               </td><td>    (23980.9 Da)</td></tr><tr><td>Yeast enolase             </td><td>    (46670.9 Da)</td></tr><tr><td>Bovine serum albumin      </td><td>    (66429.9 Da)</td></tr></table>"
-      }
-    ]
+        title: "C110",
+        subtitle:
+          "Protein calibration standards 12,000-66,000 Da",
+        price: "200 €",
+        text: "5 tubes of individual protein calibrants. Each tube provides 1000 calibration points<br>",
+        sidetext:
+          "<b>Contains:</b><br><table><tr><td>Horse heart cytochrome C  </td><td>    (12360.1 Da)</td></tr><tr><td>Horse myoglobin           </td><td>    (16951.5 Da)</td></tr><tr><td>Trypsinogen               </td><td>    (23980.9 Da)</td></tr><tr><td>Yeast enolase             </td><td>    (46670.9 Da)</td></tr><tr><td>Bovine serum albumin      </td><td>    (66429.9 Da)</td></tr></table>",
+      },
+    ],
   },
   {
-    "section": "Calibration kits",
-    "anchor": "calibration-kits",
-    "text": "Our calibration kits contain calibrated peptide and protein  mixtures, designed for analytical reproducibility and consistent signal-to-noise ratio, as well as individual calibrants and diluent.<br>They provide reproducible, standard analytical conditions to eliminate the need for cumbersome preparation of calibrant mixtures.<br>They are prepared and conditioned with the highest purity chemicals, in a form adapted to everyday use in the mass spectrometry laboratory.",
-    "img": "/images/products--calibration-kits.webp",
-    "products": [
+    section: "Calibration kits",
+    anchor: "calibration-kits",
+    text: "Our calibration kits contain calibrated peptide and protein  mixtures, designed for analytical reproducibility and consistent signal-to-noise ratio, as well as individual calibrants and diluent.<br>They provide reproducible, standard analytical conditions to eliminate the need for cumbersome preparation of calibrant mixtures.<br>They are prepared and conditioned with the highest purity chemicals, in a form adapted to everyday use in the mass spectrometry laboratory.",
+    img: "/images/products--calibration-kits.webp",
+    products: [
       {
-        "title": "C001",
-        "subtitle": "Peptide calibration kit I (1000-8500 Da)",
-        "price": "245 €",
-        "text": "- Peptide calibration mixtures 1 (PepMix1), 2 (PepMix2) and 3 (PepMix3). 1 tube each. Each tube provides 1000 calibration points<br>- Four single calibrant peptides: Angiotensin II (1046.2 Da), ACTH[18-39] (2465.7 Da), Bovine Insulin chain B (3495.9 Da), Bovine Insulin (5733.6 Da)<br>- 1 tube of mixture diluent (0.01% TFA)"
+        title: "C001",
+        subtitle: "Peptide calibration kit I (1000-8500 Da)",
+        price: "265 €",
+        text: "- Peptide calibration mixtures 1 (PepMix1), 2 (PepMix2) and 3 (PepMix3). 1 tube each. Each tube provides 1000 calibration points<br>- Four single calibrant peptides: Angiotensin II (1046.2 Da), ACTH[18-39] (2465.7 Da), Bovine Insulin chain B (3495.9 Da), Bovine Insulin (5733.6 Da)<br>- 1 tube of mixture diluent (0.01% TFA)",
       },
       {
-        "title": "C002",
-        "subtitle": "Peptide calibration kit II (0-2000 Da)",
-        "price": "245 €",
-        "text": "- Peptide calibration mixtures 1 (PepMix1), 5 (PepMix5) and 6 (PepMix6). 1 tube each. Each tube provides 1000 calibration points<br>- Four single calibrant peptides: Bradykinin[1-5] (572.7 Da), Angiotensin II (1046.2 Da), Neurotensin (1672.9 Da), ACTH[18-39] (2465.7 Da)<br>- 1 tube of mixture diluent (0.01% TFA)"
+        title: "C002",
+        subtitle: "Peptide calibration kit II (0-2000 Da)",
+        price: "265 €",
+        text: "- Peptide calibration mixtures 1 (PepMix1), 5 (PepMix5) and 6 (PepMix6). 1 tube each. Each tube provides 1000 calibration points<br>- Four single calibrant peptides: Bradykinin[1-5] (572.7 Da), Angiotensin II (1046.2 Da), Neurotensin (1672.9 Da), ACTH[18-39] (2465.7 Da)<br>- 1 tube of mixture diluent (0.01% TFA)",
       },
       {
-        "title": "C003",
-        "subtitle": "Protein calibration kit (5-100kDa)",
-        "price": "245 €",
-        "text": "- 1 tube each of protein calibration mixtures 1 (ProMix1), 2 (ProMix2) and 3 (ProMix3). Each tube provides 1000 calibration points.<br>- Four single calibrant proteins: Bovine Insulin (5733.6 Da), Horse myoglobin (16951.5 Da), Yeast enolase (46670.9 Da), Bovine serum albumin (66429.9 Da)<br>-  1 tube of mixture diluent (0.01% TFA)"
+        title: "C003",
+        subtitle: "Protein calibration kit (5-100kDa)",
+        price: "265 €",
+        text: "- 1 tube each of protein calibration mixtures 1 (ProMix1), 2 (ProMix2) and 3 (ProMix3). Each tube provides 1000 calibration points.<br>- Four single calibrant proteins: Bovine Insulin (5733.6 Da), Horse myoglobin (16951.5 Da), Yeast enolase (46670.9 Da), Bovine serum albumin (66429.9 Da)<br>-  1 tube of mixture diluent (0.01% TFA)",
       },
       {
-        "title": "C004",
-        "subtitle": "Peptide / Protein calibration kit (1-100 kDa)",
-        "price": "360 €",
-        "text": "- 1 tube of peptide calibration mixtures 1 (PepMix1), 2 (PepMix2) and 3 (PepMix3). Each tube provides 1000 calibration points<br>- 1 tube each of protein calibration mixtures 2 (ProMix2) and 3 (ProMix3). Each tube provides 100 calibration points<br>- Four single calibrant peptides: Angiotensin II (1046.2 Da), ACTH[18-39] (2465.7 Da), Bovine Insulinn chain B (3495.9 Da), Bovine Insulin (5733.6 Da)<br>- Four single calibrant proteins: Horse myoglobin (16951.5 Da), Trypsinogen (23980.9 Da), Yeast enolase (46670.9 Da), Bovine serum albumin (66429.9 Da)<br>- 1 tube of mixture diluent (0.01% TFA)"
-      }
-    ]
+        title: "C004",
+        subtitle:
+          "Peptide / Protein calibration kit (1-100 kDa)",
+        price: "390 €",
+        text: "- 1 tube of peptide calibration mixtures 1 (PepMix1), 2 (PepMix2) and 3 (PepMix3). Each tube provides 1000 calibration points<br>- 1 tube each of protein calibration mixtures 2 (ProMix2) and 3 (ProMix3). Each tube provides 100 calibration points<br>- Four single calibrant peptides: Angiotensin II (1046.2 Da), ACTH[18-39] (2465.7 Da), Bovine Insulinn chain B (3495.9 Da), Bovine Insulin (5733.6 Da)<br>- Four single calibrant proteins: Horse myoglobin (16951.5 Da), Trypsinogen (23980.9 Da), Yeast enolase (46670.9 Da), Bovine serum albumin (66429.9 Da)<br>- 1 tube of mixture diluent (0.01% TFA)",
+      },
+    ],
   },
   {
-    "section": "Protein trypsin digest kits",
-    "anchor": "protein-trypsin-digest-kits",
-    "text": "Our protein digests kits contain calibrated peptide mixtures, obtained from controlled trypsin digestion of well characterized proteins. They provide quantified, standardized digests for proteomics and LC-MS applications and eliminate the variability and cumbersome preparation of trypsin digestions.<br>Digests are prepared with pure natural proteins and conditioned, in a form adapated to everyday use int he mass spectrometry lab",
-    "img": "/images/products--trypsin-digest-kits.webp",
-    "products": [
+    section: "Protein trypsin digest kits",
+    anchor: "protein-trypsin-digest-kits",
+    text: "Our protein digests kits contain calibrated peptide mixtures, obtained from controlled trypsin digestion of well characterized proteins. They provide quantified, standardized digests for proteomics and LC-MS applications and eliminate the variability and cumbersome preparation of trypsin digestions.<br>Digests are prepared with pure natural proteins and conditioned, in a form adapated to everyday use int he mass spectrometry lab",
+    img: "/images/products--trypsin-digest-kits.webp",
+    products: [
       {
-        "title": "D101",
-        "subtitle": "Myoglobin trypsin digest",
-        "price": "185 €",
-        "graph": "/images/products--trypsin-digest-kits.webp",
-        "text": "5 tubes of digest D101. Each tube contains 50 picomoles of digested protein"
+        title: "D101",
+        subtitle: "Myoglobin trypsin digest",
+        price: "200 €",
+        graph: "/images/products--trypsin-digest-kits.webp",
+        text: "5 tubes of digest D101. Each tube contains 50 picomoles of digested protein",
       },
       {
-        "title": "D102",
-        "subtitle": "Enolase trypsin digest",
-        "price": "185 €",
-        "graph": "/images/products--trypsin-digest-kits.webp",
-        "text": "5 tubes of digest D102. Each tube contains 50 picomoles of digested protein"
+        title: "D102",
+        subtitle: "Enolase trypsin digest",
+        price: "200 €",
+        graph: "/images/products--trypsin-digest-kits.webp",
+        text: "5 tubes of digest D102. Each tube contains 50 picomoles of digested protein",
       },
       {
-        "title": "D103",
-        "subtitle": "Glutamate dehydrogenase trypsin digest",
-        "price": "185 €",
-        "graph": "/images/products--trypsin-digest-kits.webp",
-        "text": "5 tubes of digest D103. Each tube contains 50 picomoles of digested protein"
+        title: "D103",
+        subtitle: "Glutamate dehydrogenase trypsin digest",
+        price: "200 €",
+        graph: "/images/products--trypsin-digest-kits.webp",
+        text: "5 tubes of digest D103. Each tube contains 50 picomoles of digested protein",
       },
       {
-        "title": "D104",
-        "subtitle": "BSA trypsin digest",
-        "price": "185 €",
-        "graph": "/images/products--trypsin-digest-kits.webp",
-        "text": "5 tubes of digest D104 Each tube contains 50 picomoles of digested protein"
+        title: "D104",
+        subtitle: "BSA trypsin digest",
+        price: "200 €",
+        graph: "/images/products--trypsin-digest-kits.webp",
+        text: "5 tubes of digest D104 Each tube contains 50 picomoles of digested protein",
       },
       {
-        "title": "D105",
-        "subtitle": "Glycogen phosphorylase trypsin digest",
-        "price": "185 €",
-        "graph": "/images/products--trypsin-digest-kits.webp",
-        "text": "5 tubes of digest D105 Each tube contains 50 picomoles of digested protein"
+        title: "D105",
+        subtitle: "Glycogen phosphorylase trypsin digest",
+        price: "200 €",
+        graph: "/images/products--trypsin-digest-kits.webp",
+        text: "5 tubes of digest D105 Each tube contains 50 picomoles of digested protein",
       },
       {
-        "title": "D106",
-        "subtitle": "Trypsin digest mix",
-        "price": "185 €",
-        "text": "1 tube each of:<br>- D101 (Myoglobin)<br>- D102 (Enolase)<br>- D103 (Glutamate dehydrogenase)<br>- D104 (BSA)<br>- D105 (Glycogen phosphorylase)<br><br>Each tube contains 50 picomoles of digested proteins"
-      }
-    ]
-  }
+        title: "D106",
+        subtitle: "Trypsin digest mix",
+        price: "200 €",
+        text: "1 tube each of:<br>- D101 (Myoglobin)<br>- D102 (Enolase)<br>- D103 (Glutamate dehydrogenase)<br>- D104 (BSA)<br>- D105 (Glycogen phosphorylase)<br><br>Each tube contains 50 picomoles of digested proteins",
+      },
+    ],
+  },
+  {
+    section: "MALDI imaging",
+    anchor: "maldi-imaging",
+    text: "Everything you need to get started with MALDI Imaging: optimized starter kits, high-quality ITO slides, and essential accessories for perfect tissue section mounting and instrument compatibility.",
+    img: "",
+    products: [
+      {
+        title: "IMG-001",
+        subtitle: "MALDI imaging starter kit for ABI 4800",
+        price: "750 €",
+        graph: "/images/placeholder.webp",
+        text: "Complete starter kit specifically optimized for the AB Sciex 4800 MALDI TOF/TOF analyzer. Includes ITO slides, matrix (HCCA or sinapinic acid), calibration standards, conductive tape, adhesives, and detailed step-by-step protocol for high-resolution imaging experiments.",
+      },
+      {
+        title: "IMG-101",
+        subtitle: "MALDI imaging starter kit / generic",
+        price: "525 €",
+        graph: "/images/placeholder.webp",
+        text: "Universal starter kit compatible with most MALDI imaging instruments (Bruker, Shimadzu, Thermo, Waters). Contains ITO slides, HCCA and sinapinic acid matrices, calibration mix, conductive tape, adhesives, and a comprehensive imaging workflow guide.",
+      },
+      {
+        title: "IMG-102",
+        subtitle: "ITO slides - 25 pieces",
+        price: "165 €",
+        graph: "/images/placeholder.webp",
+        text: "High-quality indium tin oxide (ITO)-coated glass slides (26 × 76 mm, 1.1 mm thickness, <10 Ω/sq resistance). Optimal conductivity and optical transparency for MALDI imaging on Bruker, Shimadzu, and most commercial instruments. Pack of 25.",
+      },
+      {
+        title: "IMG-103",
+        subtitle: "ITO slides - 100 pieces",
+        price: "650 €",
+        graph: "/images/placeholder.webp",
+        text: "Bulk pack of 100 premium ITO-coated slides (26 × 76 mm, <10 Ω/sq). Same high specifications as IMG-102, ideal for high-throughput imaging labs. Best-value option for frequent users.",
+      },
+      {
+        title: "IMG-104",
+        subtitle: "Water-sensitive paper 26x76 mm - 25 pieces",
+        price: "55 €",
+        graph: "/images/placeholder.webp",
+        text: "Hydrophilic test paper for quick and reliable verification of matrix coating uniformity and sprayer performance. Turns dark blue upon contact with liquid – essential quality control tool for reproducible MALDI imaging results.",
+      },
+      {
+        title: "IMG-105",
+        subtitle:
+          "Double-sided conductive copper tape 25 mm - 20 pieces",
+        price: "55 €",
+        graph: "/images/placeholder.webp",
+        text: "25 mm wide double-sided conductive copper tape (20 pre-cut strips). Ensures excellent electrical contact between ITO slides and MALDI target plates, preventing charging effects and improving image quality.",
+      },
+      {
+        title: "IMG-106",
+        subtitle: "Double-sided adhesives for glass slides",
+        price: "35 €",
+        graph: "/images/placeholder.webp",
+        text: "Ultra-thin, permanent double-sided adhesive tabs specifically designed for mounting tissue sections on ITO or regular glass slides. Minimal background, tissue stays flat and securely attached during matrix application and analysis.",
+      },
+    ],
+  },
 ];
 
 const productCategories = [
-  'All',
-  'Matrix kits',
-  'Bulk Matrix',
-  'Peptide calibration mixtures',
-  'Protein calibration mixtures',
-  'Calibration kits',
-  'Protein trypsin digest kits'
+  "All",
+  "Matrix kits",
+  "Bulk Matrix",
+  "Calibration kits",
+  "Peptide calibration mixtures",
+  "Protein trypsin digest kits",
+  "MALDI imaging",
 ];
 
 const productCategoriesDescriptions = {
-  "Matrix kits": "MALDI matrix kits contain pre-weighed tubes of recrystallized matrices and adapted solvent mixtures. They provide standard analytical conditions and eliminate the need for cumbersome daily preparation of fresh matrix. Recrystallized and cation-depleted matrix provides higher sensitivity and improved signal-to-noise ratio when compared to non-recrystallized standard product.",
-  "Bulk Matrix": "MALDI matrix kits contain pre-weighed tubes of recrystallized matrices and adapted solvent mixtures. They provide standard analytical conditions and eliminate the need for cumbersome daily preparation of fresh matrix. Recrystallized and cation-depleted matrix provides higher sensitivity and improved signal-to-noise ratio when compared to non-recrystallized standard product.",
-  "Calibration kits": "Our calibration kits contain calibrated peptide and protein mixtures, designed for analytical reproducibility and consistent signal-to-noise ratio, as well as individual calibrants and diluent. They provide reproducible, standard analytical conditions to eliminate the need for cumbersome preparation of calibrant mixtures. They are prepared and conditioned with the highest purity chemicals, in a form adapted to everyday use in the mass spectrometry laboratory.",
-  "Protein trypsin digest kits": "Our protein digests kits contain calibrated peptide mixtures, obtained from controlled trypsin digestion of well characterized proteins. They provide quantified, standardized digests for proteomics and LC-MS applications and eliminate the variability and cumbersome preparation of trypsin digestions. Digests are prepared with pure natural proteins and conditioned, in a form adapted to everyday use in the mass spectrometry lab.",
-  "MALDI imaging solutions": "For perfect results in MALDI imaging experiments, we offer a range of products from highly purified MALDI matrices to ITO-coated slides in various packages. Our dedicated Imaging starter kits provides a specially tailored slide holder and consumables needed to run MALDI imaging experiments, including conductive slides, water-sensitive paper for control of spray conditions, mass calibrants and MALDI matrices."
+  "Matrix kits":
+    "MALDI matrix kits contain pre-weighed tubes of recrystallized matrices and adapted solvent mixtures. They provide standard analytical conditions and eliminate the need for cumbersome daily preparation of fresh matrix. Recrystallized and cation-depleted matrix provides higher sensitivity and improved signal-to-noise ratio when compared to non-recrystallized standard product.",
+  "Bulk Matrix":
+    "MALDI matrix kits contain pre-weighed tubes of recrystallized matrices and adapted solvent mixtures. They provide standard analytical conditions and eliminate the need for cumbersome daily preparation of fresh matrix. Recrystallized and cation-depleted matrix provides higher sensitivity and improved signal-to-noise ratio when compared to non-recrystallized standard product.",
+  "Calibration kits":
+    "Our calibration kits contain calibrated peptide and protein mixtures, designed for analytical reproducibility and consistent signal-to-noise ratio, as well as individual calibrants and diluent. They provide reproducible, standard analytical conditions to eliminate the need for cumbersome preparation of calibrant mixtures. They are prepared and conditioned with the highest purity chemicals, in a form adapted to everyday use in the mass spectrometry laboratory.",
+  "Protein trypsin digest kits":
+    "Our protein digests kits contain calibrated peptide mixtures, obtained from controlled trypsin digestion of well characterized proteins. They provide quantified, standardized digests for proteomics and LC-MS applications and eliminate the variability and cumbersome preparation of trypsin digestions. Digests are prepared with pure natural proteins and conditioned, in a form adapted to everyday use in the mass spectrometry lab.",
+  "MALDI imaging solutions":
+    "For perfect results in MALDI imaging experiments, we offer a range of products from highly purified MALDI matrices to ITO-coated slides in various packages. Our dedicated Imaging starter kits provides a specially tailored slide holder and consumables needed to run MALDI imaging experiments, including conductive slides, water-sensitive paper for control of spray conditions, mass calibrants and MALDI matrices.",
 };
 
-export { productData, productCategories, productCategoriesDescriptions };
+export {
+  productData,
+  productCategories,
+  productCategoriesDescriptions,
+};

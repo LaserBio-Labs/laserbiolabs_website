@@ -18,7 +18,8 @@ export default function App() {
   const [selectedPostId, setSelectedPostId] = useState<
     string | null
   >(null);
-  const [isQuoteDrawerOpen, setIsQuoteDrawerOpen] = useState(false);
+  const [isQuoteDrawerOpen, setIsQuoteDrawerOpen] =
+    useState(false);
 
   const handleProductSelect = (productId: string) => {
     setSelectedProductId(productId);
@@ -97,70 +98,72 @@ export default function App() {
           onOpenQuote={() => setIsQuoteDrawerOpen(true)}
         />
         <main>{renderPage()}</main>
-        
-        <QuoteDrawer 
-          isOpen={isQuoteDrawerOpen} 
-          onClose={() => setIsQuoteDrawerOpen(false)} 
+
+        <QuoteDrawer
+          isOpen={isQuoteDrawerOpen}
+          onClose={() => setIsQuoteDrawerOpen(false)}
         />
         <Toaster />
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-lg mb-4">LaserBio Labs</h3>
-              <p className="text-gray-400 text-sm">
-                Leading manufacturer of precision MALDI-TOF MS
-                calibration standards for research and
-                analytical laboratories worldwide.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-medium mb-4">Products</h4>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>Matrix Kits</li>
-                <li>Bulk Matrix</li>
-                <li>Peptide Calibration Mixtures</li>
-                <li>Protein Calibration Mixtures</li>
-                <li>Calibration Kits</li>
-                <li>Protein Trypsin Digest Kits</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-medium mb-4">Support</h4>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>Technical Documentation</li>
-                <li>Application Notes</li>
-                <li>Method Development</li>
-                <li>Customer Support</li>
-                <li>Training Resources</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-medium mb-4">Contact</h4>
-              <div className="text-sm text-gray-400 space-y-2">
-                <p>
-                  Wissenschaftspark 1<br />
-                  50321 Brühl, Germany
+        {/* Footer */}
+        <footer className="bg-gray-900 text-white py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-4 gap-8">
+              <div>
+                <h3 className="text-lg mb-4">LaserBio Labs</h3>
+                <p className="text-gray-400 text-sm">
+                  Leading manufacturer of precision MALDI-TOF
+                  consumables and standards for research and
+                  analytical laboratories worldwide.
                 </p>
-                <p>Phone: +49 (0) 2232 123-456</p>
-                <p>Email: info@laserbiolabs.com</p>
+              </div>
+
+              <div>
+                <h4 className="font-medium mb-4">Products</h4>
+                <ul className="text-sm text-gray-400 space-y-2">
+                  <li>Matrix Kits</li>
+                  <li>Bulk Matrix</li>
+                  <li>Peptide Calibration Mixtures</li>
+                  <li>Protein Calibration Mixtures</li>
+                  <li>Calibration Kits</li>
+                  <li>Protein Trypsin Digest Kits</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="font-medium mb-4">Support</h4>
+                <ul className="text-sm text-gray-400 space-y-2">
+                  <li>Technical Documentation</li>
+                  <li>Application Notes</li>
+                  <li>Method Development</li>
+                  <li>Customer Support</li>
+                  <li>Training Resources</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="font-medium mb-4">Contact</h4>
+                <div className="text-sm text-gray-400 space-y-2">
+                  <p>
+                    LaserBio Labs
+                    <br />
+                    AREP Center, 1 Traverse des Brucs
+                    <br />
+                    06560 Valbonne, France
+                  </p>
+                  <p>Phone: +33 (0)9 84 23 77 19</p>
+                  <p>Email: info@laserbiolabs.com</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>
-              &copy; 2024 LaserBio Labs GmbH. All rights
-              reserved.
-            </p>
+            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+              <p>
+                &copy; 2025 LaserBio Labs. All rights reserved.
+              </p>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
       </div>
     </QuoteProvider>
   );
