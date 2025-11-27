@@ -1,1 +1,3 @@
-*.xcf
+.venv
+build/
+node_modules
