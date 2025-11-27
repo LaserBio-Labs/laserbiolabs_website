@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Beaker, FileText } from 'lucide-react';
+import { Menu, X, FileText } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { useQuote } from './QuoteContext';
@@ -30,9 +30,13 @@ export function Navigation({ currentPage, onPageChange, onOpenQuote }: Navigatio
           <div className="flex items-center">
             <button
               onClick={() => onPageChange('home')}
-              className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors"
+              className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
             >
-              <Beaker className="h-8 w-8" />
+              <img 
+                src="images/logo_lbl_navbar.png" 
+                alt="LaserBio Labs" 
+                className="h-10 w-auto"
+              />
               <span className="text-xl font-semibold">LaserBio Labs</span>
             </button>
           </div>
