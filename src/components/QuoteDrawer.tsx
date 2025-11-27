@@ -38,6 +38,20 @@ export function QuoteDrawer({ isOpen, onClose }: QuoteDrawerProps) {
     contactEmail: '',
   });
 
+  // Helper function to calculate total price for an item
+  const calculateItemTotal = (price: string, quantity: number): string => {
+    // Extract number and currency from price string (e.g., "135 €" or "€135")
+    const match = price.match(/(\d+(?:\.\d+)?)\s*(€|EUR|\$|USD)?|(€|EUR|\$|USD)\s*(\d+(?:\.\d+)?)/);
+    if (match) {
+      const numericValue = parseFloat(match[1] || match[4]);
+      const currency = match[2] || match[3] || '€';
+      const total = numericValue * quantity;
+      // Format with currency in the same position as original
+      return price.match(/^\d/) ? `${total} ${currency}` : `${currency} ${total}`;
+    }
+    return price; // Return original if parsing fails
+  };
+
   const handleFormChange = (field: keyof QuoteFormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
@@ -319,7 +333,9 @@ export function QuoteDrawer({ isOpen, onClose }: QuoteDrawerProps) {
                             <Plus className="h-3 w-3" />
                           </Button>
                         </div>
-                        <div className="font-medium text-primary">{item.price}</div>
+                        <div className="font-medium text-primary">
+                          {calculateItemTotal(item.price, item.quantity)}
+                        </div>
                       </div>
                     </CardContent>
                   </Card>

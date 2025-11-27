@@ -16,11 +16,12 @@ const categories = ['All Posts', 'Case Studies', 'Academic Research', 'Industry 
 export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
   const selectedPost = postId ? blogPosts.find(post => post.id === postId) : null;
   
+  /* BLOG POST DETAIL VIEW - COMMENTED OUT
   if (selectedPost) {
     // Show detailed blog post view
     return (
       <div className="min-h-screen bg-gray-50">
-        {/* Header with back button */}
+        {/* Header with back button *\/}
         <div className="bg-white border-b">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <Button
@@ -70,7 +71,7 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
           </div>
         </div>
 
-        {/* Hero Image */}
+        {/* Hero Image *\/}
         <div className="bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <ImageWithFallback
@@ -81,14 +82,14 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
           </div>
         </div>
 
-        {/* Content */}
+        {/* Content *\/}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div 
             className="prose prose-lg max-w-none"
             dangerouslySetInnerHTML={{ __html: selectedPost.content }}
           />
           
-          {/* Call to Action */}
+          {/* Call to Action *\/}
           <div className="mt-12 p-8 bg-primary rounded-lg text-primary-foreground text-center">
             <h3 className="text-xl mb-4">Ready to Transform Your Laboratory?</h3>
             <p className="mb-6 opacity-90">
@@ -102,6 +103,7 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
       </div>
     );
   }
+  */
 
   // Show blog overview page
   return (
@@ -126,7 +128,7 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
           </div>
         </div>
 
-        {/* Featured Post */}
+        {/* FEATURED POST - COMMENTED OUT
         <div className="mb-12">
           <h2 className="text-2xl mb-6 text-gray-900">Featured Article</h2>
           <Card 
@@ -192,8 +194,9 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
             </div>
           </Card>
         </div>
+        */}
 
-        {/* Recent Posts Grid */}
+        {/* RECENT POSTS GRID - COMMENTED OUT
         <div className="mb-12">
           <h2 className="text-2xl mb-6 text-gray-900">Recent Articles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -253,8 +256,9 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
             ))}
           </div>
         </div>
+        */}
 
-        {/* Newsletter Signup */}
+        {/* NEWSLETTER SIGNUP - COMMENTED OUT
         <div className="mt-16 bg-primary rounded-lg p-8 text-center text-primary-foreground">
           <h2 className="text-2xl mb-4">Stay Updated with Laboratory Insights</h2>
           <p className="text-lg mb-6 opacity-90">
@@ -264,6 +268,7 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
             Subscribe to Newsletter
           </Button>
         </div>
+        */}
       </div>
     </div>
   );

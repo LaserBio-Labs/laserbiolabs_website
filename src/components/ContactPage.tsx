@@ -100,9 +100,9 @@ ${formData.message}`;
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="flex justify-center">
           {/* Contact Information */}
-          <div className="space-y-6">
+          <div className="space-y-6 max-w-2xl w-full">
             <Card>
               <CardHeader>
                 <CardTitle>Get in Touch</CardTitle>
@@ -158,10 +158,23 @@ ${formData.message}`;
                   <Button
                     variant="outline"
                     className="justify-start"
-                    onClick={() =>
-                      (window.location.href =
-                        "mailto:sales@laserbiolabs.com?subject=Product Inquiry")
-                    }
+                    onClick={() => {
+                      const subject = "Product Inquiry";
+                      const body = `Dear LaserBio Labs Team,
+
+I am interested in learning more about your MALDI-TOF calibration products.
+
+Product/Category of Interest:
+
+Specific Questions:
+
+Organization:
+Name:
+Contact Number:
+
+Best regards,`;
+                      window.location.href = `mailto:info@laserbiolabs.com?cc=sales@laserbiolabs.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    }}
                   >
                     <Mail className="h-4 w-4 mr-2" />
                     Product Inquiry
@@ -169,10 +182,26 @@ ${formData.message}`;
                   <Button
                     variant="outline"
                     className="justify-start"
-                    onClick={() =>
-                      (window.location.href =
-                        "mailto:support@laserbiolabs.com?subject=Technical Support")
-                    }
+                    onClick={() => {
+                      const subject = "Technical Support Request";
+                      const body = `Dear LaserBio Labs Team,
+
+I need technical assistance with the following:
+
+Product Name/Code:
+
+Issue Description:
+
+Instrument Model:
+Current Application:
+
+Organization:
+Name:
+Contact Number:
+
+Best regards,`;
+                      window.location.href = `mailto:info@laserbiolabs.com?cc=sales@laserbiolabs.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    }}
                   >
                     <Mail className="h-4 w-4 mr-2" />
                     Technical Support
@@ -180,10 +209,25 @@ ${formData.message}`;
                   <Button
                     variant="outline"
                     className="justify-start"
-                    onClick={() =>
-                      (window.location.href =
-                        "mailto:orders@laserbiolabs.com?subject=Order Status")
-                    }
+                    onClick={() => {
+                      const subject = "Order Status Inquiry";
+                      const body = `Dear LaserBio Labs Team,
+
+I would like to inquire about the status of my order.
+
+Order Reference/Date:
+
+Products Ordered:
+
+Additional Information:
+
+Organization:
+Name:
+Contact Number:
+
+Best regards,`;
+                      window.location.href = `mailto:info@laserbiolabs.com?cc=sales@laserbiolabs.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    }}
                   >
                     <Mail className="h-4 w-4 mr-2" />
                     Order Status
@@ -193,7 +237,7 @@ ${formData.message}`;
             </Card>
           </div>
 
-          {/* Contact Form */}
+          {/* CONTACT FORM - COMMENTED OUT
           <Card>
             <CardHeader>
               <CardTitle>Send us a Message</CardTitle>
@@ -345,6 +389,7 @@ ${formData.message}`;
               </p>
             </CardContent>
           </Card>
+          */}
         </div>
 
         {/* Additional Information */}

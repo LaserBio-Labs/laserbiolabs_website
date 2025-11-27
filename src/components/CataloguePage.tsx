@@ -216,17 +216,14 @@ export function CataloguePage({
                                 />
                               </div>
 
-                              {/* Product ID and Price */}
-                              <div className="flex justify-between items-center mb-2">
+                              {/* Product ID */}
+                              <div className="mb-2">
                                 <Badge
                                   variant="secondary"
                                   className="text-xs font-medium"
                                 >
                                   {product.id}
                                 </Badge>
-                                <div className="text-lg font-medium text-primary">
-                                  {product.price}
-                                </div>
                               </div>
 
                               {/* Product Title */}
@@ -299,17 +296,14 @@ export function CataloguePage({
                       />
                     </div>
 
-                    {/* Product ID and Price */}
-                    <div className="flex justify-between items-center mb-2">
+                    {/* Product ID */}
+                    <div className="mb-2">
                       <Badge
                         variant="secondary"
                         className="text-xs font-medium"
                       >
                         {product.id}
                       </Badge>
-                      <div className="text-lg font-medium text-primary">
-                        {product.price}
-                      </div>
                     </div>
 
                     {/* Product Title */}

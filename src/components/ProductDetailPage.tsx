@@ -170,22 +170,12 @@ export function ProductDetailPage({
               </h1>
             </div>
 
-            {/* Pricing and Actions */}
+            {/* Actions and Availability */}
             <Card>
               <CardContent className="pt-6">
-                <div className="flex justify-between items-center mb-4">
-                  <div>
-                    <p className="text-sm text-gray-500 mb-1">
-                      Price
-                    </p>
-                    <p className="text-3xl font-medium text-primary">
-                      {product.price}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-green-600">
-                    <CheckCircle className="h-4 w-4" />
-                    <span>In Stock</span>
-                  </div>
+                <div className="flex items-center gap-2 text-sm text-green-600 mb-4">
+                  <CheckCircle className="h-4 w-4" />
+                  <span>In Stock</span>
                 </div>
 
                 <div className="space-y-3">
