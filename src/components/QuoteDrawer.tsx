@@ -23,6 +23,7 @@ interface QuoteFormData {
   contactName: string;
   contactPhone: string;
   contactEmail: string;
+  vatNumber: string;
 }
 
 export function QuoteDrawer({ isOpen, onClose }: QuoteDrawerProps) {
@@ -36,6 +37,7 @@ export function QuoteDrawer({ isOpen, onClose }: QuoteDrawerProps) {
     contactName: '',
     contactPhone: '',
     contactEmail: '',
+    vatNumber: '',
   });
 
   // Helper function to calculate total price for an item
@@ -92,6 +94,7 @@ export function QuoteDrawer({ isOpen, onClose }: QuoteDrawerProps) {
     body += '=== CONTACT INFORMATION ===\n';
     body += `Institution/Company: ${formData.institution}\n`;
     if (formData.department) body += `Department/Laboratory: ${formData.department}\n`;
+    if (formData.vatNumber) body += `EU VAT Number: ${formData.vatNumber}\n`;
     if (formData.contactName) body += `Contact Name: ${formData.contactName}\n`;
     if (formData.contactEmail) body += `Contact Email: ${formData.contactEmail}\n`;
     if (formData.contactPhone) body += `Contact Phone: ${formData.contactPhone}\n`;
@@ -203,6 +206,17 @@ export function QuoteDrawer({ isOpen, onClose }: QuoteDrawerProps) {
                   value={formData.department}
                   onChange={(e) => handleFormChange('department', e.target.value)}
                   placeholder="Enter your department or laboratory"
+                />
+              </div>
+
+              {/* EU VAT Number - Optional */}
+              <div className="space-y-2">
+                <Label htmlFor="vatNumber">EU VAT number (EU only)</Label>
+                <Input
+                  id="vatNumber"
+                  value={formData.vatNumber}
+                  onChange={(e) => handleFormChange('vatNumber', e.target.value)}
+                  placeholder="Enter your EU VAT number"
                 />
               </div>
 
