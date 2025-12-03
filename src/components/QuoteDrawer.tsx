@@ -119,7 +119,7 @@ export function QuoteDrawer({ isOpen, onClose }: QuoteDrawerProps) {
     body += 'Best regards,';
 
     // Open email client without navigating away from current page
-    const mailtoLink = `mailto:orders@laserbiolabs.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:info@laserbiolabs.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     const anchor = document.createElement('a');
     anchor.href = mailtoLink;
     anchor.target = '_blank';
