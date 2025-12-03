@@ -123,7 +123,7 @@ export function BlogPage() {
           </div>
         </div>
 
-        {/* FEATURED POST */}
+        {/* FEATURED POST - COMMENTED OUT
         <div className="mb-12">
           <h2 className="text-2xl mb-6 text-gray-900">Featured Article</h2>
           <Card 
@@ -189,8 +189,9 @@ export function BlogPage() {
             </div>
           </Card>
         </div>
+        */}
 
-        {/* RECENT POSTS GRID */}
+        {/* RECENT POSTS GRID - COMMENTED OUT
         <div className="mb-12">
           <h2 className="text-2xl mb-6 text-gray-900">Recent Articles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -229,6 +230,14 @@ export function BlogPage() {
                         <span>{post.author}</span>
                       </div>
                       <div className="flex items-center gap-1">
+                        <Calendar className="h-3 w-3" />
+                        <span>{new Date(post.publishDate).toLocaleDateString('en-US', { 
+                          year: 'numeric', 
+                          month: 'short', 
+                          day: 'numeric' 
+                        })}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
                         <Clock className="h-3 w-3" />
                         <span>{post.readTime}</span>
                       </div>
@@ -250,8 +259,9 @@ export function BlogPage() {
             ))}
           </div>
         </div>
+        */}
 
-        {/* NEWSLETTER SIGNUP */}
+        {/* NEWSLETTER SIGNUP - COMMENTED OUT
         <div className="mt-16 bg-primary rounded-lg p-8 text-center text-primary-foreground">
           <h2 className="text-2xl mb-4">Stay Updated with Laboratory Insights</h2>
           <p className="text-lg mb-6 opacity-90">
@@ -261,6 +271,7 @@ export function BlogPage() {
             Subscribe to Newsletter
           </Button>
         </div>
+        */}
       </div>
     </div>
   );

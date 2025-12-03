@@ -222,8 +222,7 @@ export function HomePage({}: HomePageProps) {
             {trustedClients.map((client, index) => (
               <div key={index} className="group">
                 <div
-                  className="relative overflow-hidden rounded-lg bg-gray-50 aspect-square cursor-pointer"
-                  onClick={() => navigate(`/blog/${client.id}`)}
+                  className="relative overflow-hidden rounded-lg bg-gray-50 aspect-square"
                 >
                   <ImageWithFallback
                     src={client.image}
