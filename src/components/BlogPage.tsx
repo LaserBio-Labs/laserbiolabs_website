@@ -1,31 +1,27 @@
-import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { blogPosts } from '../data/blog_posts';
-
-interface BlogPageProps {
-  postId?: string;
-  onBack?: () => void;
-  onPostSelect?: (postId: string) => void;
-}
+import { useParams, useNavigate } from 'react-router-dom';
 
 const categories = ['All Posts', 'Case Studies', 'Academic Research', 'Industry Solutions', 'Regulatory Compliance', 'Clinical Applications', 'Business Development'];
 
-export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
+export function BlogPage() {
+  const { postId } = useParams<{ postId: string }>();
+  const navigate = useNavigate();
   const selectedPost = postId ? blogPosts.find(post => post.id === postId) : null;
-  
-  /* BLOG POST DETAIL VIEW - COMMENTED OUT
+
   if (selectedPost) {
     // Show detailed blog post view
     return (
       <div className="min-h-screen bg-gray-50">
-        {/* Header with back button *\/}
+        {/* Header with back button */}
         <div className="bg-white border-b">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <Button
-              onClick={onBack}
+              onClick={() => navigate('/blog')}
               variant="ghost"
               className="flex items-center gap-2 mb-4"
             >
@@ -71,7 +67,7 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
           </div>
         </div>
 
-        {/* Hero Image *\/}
+        {/* Hero Image */}
         <div className="bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <ImageWithFallback
@@ -82,20 +78,20 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
           </div>
         </div>
 
-        {/* Content *\/}
+        {/* Content */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div 
             className="prose prose-lg max-w-none"
             dangerouslySetInnerHTML={{ __html: selectedPost.content }}
           />
           
-          {/* Call to Action *\/}
+          {/* Call to Action */}
           <div className="mt-12 p-8 bg-primary rounded-lg text-primary-foreground text-center">
             <h3 className="text-xl mb-4">Ready to Transform Your Laboratory?</h3>
             <p className="mb-6 opacity-90">
               Contact our experts to learn how our calibration standards can improve your analytical capabilities
             </p>
-            <Button variant="secondary" size="lg">
+            <Button variant="secondary" size="lg" onClick={() => navigate('/contact')}>
               Get Expert Consultation
             </Button>
           </div>
@@ -103,7 +99,6 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
       </div>
     );
   }
-  */
 
   // Show blog overview page
   return (
@@ -128,12 +123,12 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
           </div>
         </div>
 
-        {/* FEATURED POST - COMMENTED OUT
+        {/* FEATURED POST */}
         <div className="mb-12">
           <h2 className="text-2xl mb-6 text-gray-900">Featured Article</h2>
           <Card 
             className="group cursor-pointer hover:shadow-lg transition-all duration-200 overflow-hidden"
-            onClick={() => onPostSelect && onPostSelect(blogPosts[0].id)}
+            onClick={() => navigate(`/blog/${blogPosts[0].id}`)}
           >
             <div className="grid lg:grid-cols-2 gap-6">
               <div className="relative overflow-hidden">
@@ -194,9 +189,8 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
             </div>
           </Card>
         </div>
-        */}
 
-        {/* RECENT POSTS GRID - COMMENTED OUT
+        {/* RECENT POSTS GRID */}
         <div className="mb-12">
           <h2 className="text-2xl mb-6 text-gray-900">Recent Articles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -204,7 +198,7 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
               <Card 
                 key={post.id} 
                 className="group cursor-pointer hover:shadow-lg transition-all duration-200"
-                onClick={() => onPostSelect && onPostSelect(post.id)}
+                onClick={() => navigate(`/blog/${post.id}`)}
               >
                 <CardContent className="p-0">
                   <div className="relative overflow-hidden rounded-t-lg">
@@ -256,9 +250,8 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
             ))}
           </div>
         </div>
-        */}
 
-        {/* NEWSLETTER SIGNUP - COMMENTED OUT
+        {/* NEWSLETTER SIGNUP */}
         <div className="mt-16 bg-primary rounded-lg p-8 text-center text-primary-foreground">
           <h2 className="text-2xl mb-4">Stay Updated with Laboratory Insights</h2>
           <p className="text-lg mb-6 opacity-90">
@@ -268,7 +261,6 @@ export function BlogPage({ postId, onBack, onPostSelect }: BlogPageProps) {
             Subscribe to Newsletter
           </Button>
         </div>
-        */}
       </div>
     </div>
   );

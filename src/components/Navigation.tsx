@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, FileText } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -10,16 +11,16 @@ interface NavigationProps {
   onOpenQuote: () => void;
 }
 
-export function Navigation({ currentPage, onPageChange, onOpenQuote }: NavigationProps) {
+export function Navigation({ currentPage, onOpenQuote }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { totalItems } = useQuote();
 
   const navigationItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'catalogue', label: 'Catalogue' },
-    { id: 'blog', label: 'Blog' },
-    { id: 'faq', label: 'FAQ' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'home', label: 'Home', path: '/' },
+    { id: 'catalogue', label: 'Catalogue', path: '/catalogue' },
+    { id: 'blog', label: 'Blog', path: '/blog' },
+    { id: 'faq', label: 'FAQ', path: '/faq' },
+    { id: 'contact', label: 'Contact', path: '/contact' }
   ];
 
   return (
@@ -28,26 +29,26 @@ export function Navigation({ currentPage, onPageChange, onOpenQuote }: Navigatio
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <button
-              onClick={() => onPageChange('home')}
+            <Link
+              to="/"
               className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
             >
               <img 
-                src="images/logo_lbl_navbar.png" 
+                src="/images/logo_lbl_navbar.png" 
                 alt="LaserBio Labs" 
                 className="h-10 w-auto"
               />
               <span className="text-xl font-semibold">LaserBio Labs</span>
-            </button>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-4">
             <div className="flex items-baseline space-x-4">
               {navigationItems.map((item) => (
-                <button
+                <Link
                   key={item.id}
-                  onClick={() => onPageChange(item.id)}
+                  to={item.path}
                   className={`px-3 py-2 rounded-md transition-colors ${
                     currentPage === item.id
                       ? 'bg-primary text-primary-foreground'
@@ -55,7 +56,7 @@ export function Navigation({ currentPage, onPageChange, onOpenQuote }: Navigatio
                   }`}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
             </div>
             
@@ -116,12 +117,10 @@ export function Navigation({ currentPage, onPageChange, onOpenQuote }: Navigatio
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
               {navigationItems.map((item) => (
-                <button
+                <Link
                   key={item.id}
-                  onClick={() => {
-                    onPageChange(item.id);
-                    setIsMobileMenuOpen(false);
-                  }}
+                  to={item.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className={`block w-full text-left px-3 py-2 rounded-md transition-colors ${
                     currentPage === item.id
                       ? 'bg-primary text-primary-foreground'
@@ -129,7 +128,7 @@ export function Navigation({ currentPage, onPageChange, onOpenQuote }: Navigatio
                   }`}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
             </div>
           </div>

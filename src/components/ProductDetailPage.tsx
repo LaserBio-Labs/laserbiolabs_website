@@ -17,11 +17,12 @@ import { Badge } from "./ui/badge";
 import { Separator } from "./ui/separator";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useQuote } from "./QuoteContext";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 import {
   productData,
   productCategoriesDescriptions,
 } from "../data/productData";
+import { useParams, useNavigate } from "react-router-dom";
 
 interface Product {
   id: string;
@@ -51,15 +52,9 @@ productData.forEach((section) => {
   });
 });
 
-interface ProductDetailPageProps {
-  productId: string;
-  onBack: () => void;
-}
-
-export function ProductDetailPage({
-  productId,
-  onBack,
-}: ProductDetailPageProps) {
+export function ProductDetailPage() {
+  const { productId } = useParams<{ productId: string }>();
+  const navigate = useNavigate();
   const product = products.find((p) => p.id === productId);
   const { addItem } = useQuote();
 
@@ -71,7 +66,7 @@ export function ProductDetailPage({
             <h1 className="text-2xl mb-4 text-gray-900">
               Product Not Found
             </h1>
-            <Button onClick={onBack}>
+            <Button onClick={() => navigate(-1)}>
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Catalogue
             </Button>
@@ -122,7 +117,7 @@ export function ProductDetailPage({
         <div className="mb-6">
           <Button
             variant="ghost"
-            onClick={onBack}
+            onClick={() => navigate(-1)}
             className="flex items-center gap-2"
           >
             <ArrowLeft className="h-4 w-4" />
