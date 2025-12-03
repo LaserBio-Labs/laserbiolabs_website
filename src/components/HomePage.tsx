@@ -2,16 +2,16 @@ import { Microscope, Award, Users, Globe } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useNavigate } from "react-router-dom";
 
 interface HomePageProps {
   onPageChange: (page: string) => void;
   onPostSelect: (postId: string) => void;
 }
 
-export function HomePage({
-  onPageChange,
-  onPostSelect,
-}: HomePageProps) {
+export function HomePage({}: HomePageProps) {
+  const navigate = useNavigate();
+
   const features = [
     {
       icon: Microscope,
@@ -103,14 +103,14 @@ export function HomePage({
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
-                  onClick={() => onPageChange("catalogue")}
+                  onClick={() => navigate("/catalogue")}
                   size="lg"
                   className="bg-primary hover:bg-primary/90"
                 >
                   View Catalogue
                 </Button>
                 <Button
-                  onClick={() => onPageChange("contact")}
+                  onClick={() => navigate("/contact")}
                   variant="outline"
                   size="lg"
                 >
@@ -223,7 +223,7 @@ export function HomePage({
               <div key={index} className="group">
                 <div
                   className="relative overflow-hidden rounded-lg bg-gray-50 aspect-square cursor-pointer"
-                  onClick={() => onPostSelect(client.id)}
+                  onClick={() => navigate(`/blog/${client.id}`)}
                 >
                   <ImageWithFallback
                     src={client.image}
@@ -258,7 +258,7 @@ export function HomePage({
               calibration needs
             </p>
             <Button
-              onClick={() => onPageChange("contact")}
+              onClick={() => navigate("/contact")}
               variant="outline"
               size="lg"
             >
@@ -279,7 +279,7 @@ export function HomePage({
             calibration standards
           </p>
           <Button
-            onClick={() => onPageChange("catalogue")}
+            onClick={() => navigate("/catalogue")}
             variant="secondary"
             size="lg"
           >

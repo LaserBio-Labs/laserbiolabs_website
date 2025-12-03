@@ -6,11 +6,12 @@ import { Input } from "./ui/input";
 import { Search, ShoppingCart } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useQuote } from "./QuoteContext";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 import {
   productData,
   productCategories,
 } from "../data/productData";
+import { useNavigate } from "react-router-dom";
 
 interface Product {
   id: string;
@@ -40,13 +41,8 @@ productData.forEach((section) => {
   });
 });
 
-interface CataloguePageProps {
-  onProductSelect?: (productId: string) => void;
-}
-
-export function CataloguePage({
-  onProductSelect,
-}: CataloguePageProps) {
+export function CataloguePage() {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] =
     useState("All");
   const [searchTerm, setSearchTerm] = useState("");
@@ -70,9 +66,7 @@ export function CataloguePage({
   });
 
   const handleProductClick = (productId: string) => {
-    if (onProductSelect) {
-      onProductSelect(productId);
-    }
+    navigate(`/product/${productId}`);
   };
 
   const handleAddToQuote = (
